@@ -1,5 +1,31 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { onMounted, onUnmounted } from "vue";
+import { userSignIn, userSignOut } from "./firebase/auth.js";
+import HelloWorld from "./components/HelloWorld.vue";
+import { app } from "./firebase/config";
+import { getProducts, addProduct, updateProduct } from "./firebase/db";
+
+
+onMounted( async () => {
+  // app
+  await userSignIn("harishswami62@gmail.com", "123456789");
+  // await userSignOut();
+  // let products = await getProducts();
+  // console.log(products);
+  let obj = {
+        id: "12",
+        productname: "Product 6",
+        price: 9.99,
+        ingredients: ["ingredient1", "ingredient2"] 
+      }
+  addProduct(obj);
+  obj.id = "13";
+  updateProduct(obj)
+  console.log(`the component is now mounted.`);
+  // setTimeout( async() => {
+  //   await userSignOut();
+  // }, 5000);
+});
 </script>
 
 <template>
@@ -28,5 +54,4 @@ import HelloWorld from './components/HelloWorld.vue'
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
-</style>import HelloWorldVue from './components/HelloWorld.vue';
-
+</style>
