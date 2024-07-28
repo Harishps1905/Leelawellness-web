@@ -15,7 +15,7 @@ export const getProducts = async () => {
         return products;
     } catch (error) {
         console.error("Error fetching products: ", error);
-        throw error;
+        throw "Error Getting Product: " + error;
     }
   };
   
@@ -29,7 +29,7 @@ export const addProduct = async (product) => {
       }
       throw new Error("Product already exists");
     } catch (error) {
-      throw error;
+      throw "Error Adding Product: " + error;
     }
   };
   
@@ -45,7 +45,7 @@ export const updateProduct = async (product) => {
         }
         throw new Error("Product not found");
     } catch (error) {
-      throw error;
+      throw "Error Updating Product: " + error;
     }
   };
 
@@ -62,7 +62,7 @@ export const deleteProduct = async (id) => {
       }
       throw new Error("Product not found");
   } catch (error) {
-    throw error;
+    throw "Error Deleting Product: " + error;
   }
 };
 

@@ -15,17 +15,32 @@ onMounted( async () => {
         ingredients: ["ingredient1", "ingredient2"] 
       }
   try {
+
+  // get all products
   let products = await getProducts();
   console.log(products);
-  await userSignOut();
 
-    // await userSignIn("harishswami62@gmail.com", "123456789");
-    // let updated = await updateProduct(obj)
-    // console.log(updated);
-    // let added = await addProduct(obj);
-    // console.log(added);
-    let del = await deleteProduct(obj.id);
-    console.log(del);
+
+  //signout user
+  // await userSignOut();
+
+
+  // signin user
+  // let user = await userSignIn("harishswami62@gmail.com", "987654321");
+  // console.log(user);
+
+  // let updated = await updateProduct(obj)
+  // console.log(updated);
+
+  // add product
+  // let added = await addProduct(obj);
+  // console.log(added);
+
+  // delete product
+  //   let del = await deleteProduct(obj.id);
+  //   console.log(del);
+
+  
   } catch (error) {
     console.log(error);
   }
