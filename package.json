@@ -9,8 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "firebase": "^10.12.4",
-    "vue": "^3.4.31"
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.12.3",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
