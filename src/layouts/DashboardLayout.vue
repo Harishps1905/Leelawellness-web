@@ -35,33 +35,21 @@
 <script>
 import { userSignOut } from "@/firebase/auth.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
+import { app } from "@/firebase/config";
 
 export default {
   name: 'dashboard',
   setup() {
-    const router = useRouter();
-
-    const checkAuth = () => {
-      const auth = getAuth();
-      onAuthStateChanged(auth, (user) => {
-        if (!user) {
-          router.push('/admin');
-        }
-      });
-    };
 
     const logout = async () => {
       try {
         await userSignOut();
-        router.push('/admin');
+        this.$router.push('/admin');
       } catch (error) {
         console.error("Error signing out:", error);
       }
     };
-
-    checkAuth();
-
     return { logout };
   }
 }
