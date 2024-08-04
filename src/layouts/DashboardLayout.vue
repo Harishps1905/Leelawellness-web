@@ -1,21 +1,24 @@
 <template>
-    <div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
       <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-warning sidebar">
         <div class="position-sticky">
           <ul class="dashboardAdmin nav flex-column">
             <li class="nav-item">
-                <RouterLink class="nav-link text-decoration-none" :to="{ path: '/dashboard' }">dashboard</RouterLink>
+              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'dashboard', 'adminnonactive': $route.name !== 'dashboard' }" :to="{ path: '/dashboard' }">Dashboard</RouterLink>
             </li>
             <li class="nav-item">
-                <RouterLink class="nav-link text-decoration-none" :to="{ path: '/dashboard/products' }">products</RouterLink>
+              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'products', 'adminnonactive': $route.name !== 'products' }" :to="{ path: '/dashboard/products' }">Products</RouterLink>
             </li>
             <li class="nav-item">
-                <RouterLink class="nav-link text-decoration-none" :to="{ path: '/dashboard' }">customers</RouterLink>
+              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'customers', 'adminnonactive': $route.name !== 'customers' }" :to="{ path: '/dashboard/customers' }">Customers</RouterLink>
             </li>
             <li class="nav-item">
-                <RouterLink class="nav-link text-decoration-none" :to="{ path: '/dashboard' }">settings</RouterLink>
+              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'settings', 'adminnonactive': $route.name !== 'settings' }" :to="{ path: '/dashboard/settings' }">Settings</RouterLink>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-decoration-none adminnonactive" @click.prevent="logout">Logout</a>
             </li>
           </ul>
         </div>
@@ -30,10 +33,40 @@
 </template>
 
 <script>
-    export default {
-        name: 'dashboard'
-    }
+import { userSignOut } from "@/firebase/auth.js";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useRouter } from 'vue-router';
+
+export default {
+  name: 'dashboard',
+  setup() {
+    const router = useRouter();
+
+    const checkAuth = () => {
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          router.push('/admin');
+        }
+      });
+    };
+
+    const logout = async () => {
+      try {
+        await userSignOut();
+        router.push('/admin');
+      } catch (error) {
+        console.error("Error signing out:", error);
+      }
+    };
+
+    checkAuth();
+
+    return { logout };
+  }
+}
 </script>
+
 
 <style scoped>
 /* Add any component-specific styles here */
@@ -62,7 +95,15 @@
   overflow-y: auto;
 }
 
-.dashboardAdmin .router-link-active{
+.dashboardAdmin .adminactive{
   color: brown;
+  background: #fff;
+  transition: 1s;
+  border-bottom: 3px solid brown;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.dashboardAdmin .adminnonactive{
+  color: black;
 }
 </style>

@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 import { userSignIn, userSignOut } from "./firebase/auth.js";
-import HelloWorld from "./components/HelloWorld.vue";
 import { app } from "./firebase/config";
 import {
   getProducts,

@@ -24,23 +24,39 @@ const routes = [
                 path: '/about',
                 name: 'AboutUs',
                 component: AboutUs
+            },
+            {
+                path: '/admin',
+                name: 'loginAdmin',
+                component: () => import("@/views/Login.vue"),
+
             }
         ]
     },
     {
-        path: '/admindashboard',
+        path: '/dashboard',
         name: 'dashboard',
         component: Dashboard,
         children: [
             {
-                path: '/dashboard',
-                name: 'AboutUs',
+                path: '',
+                name: 'dashboard',
                 component: () => import("@/admin/DashboardAdmin.vue"),
             },
             {
                 path: '/dashboard/products',
                 name: 'products',
                 component: () => import("@/admin/Products.vue"),
+            },
+            {
+                path: '/dashboard/customers',
+                name: 'customers',
+                component: () => import("@/admin/Customers.vue"),
+            },
+            {
+                path: '/dashboard/settings',
+                name: 'settings',
+                component: () => import("@/admin/Settings.vue"),
             }
         ]
     }
@@ -53,6 +69,7 @@ const router = createRouter({
         document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
     }
 })
+
 
 
 export default router

@@ -1,21 +1,21 @@
 <template>
-    <div>
-        <Header/>
-        <main>
-            <router-view />
-        </main>
-        footer
-    </div>
+    <Header/>
+    <main>
+        <router-view/>
+    </main>
+    <div>footer</div>
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-
-export default {
-    components: {
-        Header
-    },
-}
+import Header from '@/components/Header.vue';
+    export default {
+        name:'WebsiteLayout',
+        components: {
+            Header
+        }
+    }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
