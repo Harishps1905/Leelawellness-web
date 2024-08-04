@@ -32,8 +32,7 @@ export const addProduct = async (product) => {
       throw "Error Adding Product: " + error;
     }
   };
-  
-  
+    
 //get update a product from the db
 export const updateProduct = async (product) => {
     try {
