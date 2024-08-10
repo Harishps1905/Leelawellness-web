@@ -8,6 +8,7 @@ import Dashboard from '@/layouts/DashboardLayout.vue'
 import Landing from '@/views/Landing.vue'
 import AboutUs from '@/views/About.vue';
 import NotFound from "@/views/NotFound.vue";
+import ContactUs from "@/views/ContactUs.vue";
 
 const routes = [
     {
@@ -26,11 +27,35 @@ const routes = [
                 component: AboutUs
             },
             {
+                path: '/contact-us',
+                name: 'ContactUs',
+                component: ContactUs
+            },
+            
+            {
                 path: '/admin',
                 name: 'loginAdmin',
                 component: () => import("@/views/Login.vue"),
 
-            }
+            },
+            {
+                path: '/products',
+                name: 'ProductPage',
+                component: () => import("@/views/ProductPage.vue"),
+
+            },
+            {
+                path: '/cart',
+                name: 'cart',
+                component: () => import("@/views/CartPage.vue"),
+
+            },
+            {
+                path: '/products/:id',
+                name: 'ProductPageDesc',
+                component: () => import("@/views/ProductPageDesc.vue"),
+                props: true
+              }
         ]
     },
     {

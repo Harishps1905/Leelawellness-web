@@ -16,3 +16,9 @@ body {
 }
 
 /* src/assets/styles.css or any global stylesheet */
+
+.header-2 {
+  background-image: linear-gradient(to right, #dd850a, #ffffff);
+  color: white;
+  transition: 0.3s;
+} 
