@@ -6,27 +6,40 @@
         <div class="position-sticky">
           <ul class="dashboardAdmin nav flex-column">
             <li class="nav-item">
-              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'dashboard', 'adminnonactive': $route.name !== 'dashboard' }" :to="{ path: '/dashboard' }">Dashboard</RouterLink>
+              <RouterLink class="nav-link text-decoration-none"
+                :class="{ adminactive: $route.name === 'dashboard', 'adminnonactive': $route.name !== 'dashboard' }"
+                :to="{ path: '/dashboard' }">Dashboard</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'products', 'adminnonactive': $route.name !== 'products' }" :to="{ path: '/dashboard/products' }">Products</RouterLink>
+              <RouterLink class="nav-link text-decoration-none"
+                :class="{ adminactive: $route.name === 'products', 'adminnonactive': $route.name !== 'products' }"
+                :to="{ path: '/dashboard/products' }">Products</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'customers', 'adminnonactive': $route.name !== 'customers' }" :to="{ path: '/dashboard/customers' }">Customers</RouterLink>
+              <RouterLink class="nav-link text-decoration-none"
+                :class="{ adminactive: $route.name === 'customers', 'adminnonactive': $route.name !== 'customers' }"
+                :to="{ path: '/dashboard/customers' }">Customers</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link text-decoration-none" :class="{ adminactive: $route.name === 'settings', 'adminnonactive': $route.name !== 'settings' }" :to="{ path: '/dashboard/settings' }">Settings</RouterLink>
+              <RouterLink class="nav-link text-decoration-none"
+                :class="{ adminactive: $route.name === 'settings', 'adminnonactive': $route.name !== 'settings' }"
+                :to="{ path: '/dashboard/settings' }">Settings</RouterLink>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-decoration-none adminnonactive" @click.prevent="logout">Logout</a>
+              <a href="#" class="nav-link text-decoration-none adminnonactive" @click.prevent="logouted">Logout</a>
             </li>
           </ul>
         </div>
       </nav>
-
       <!-- Main content -->
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <router-view/>
+       <div v-if="this.$store.state.auth">
+        <router-view />
+       </div>
+       <div v-else>
+         <h1>You are not logged in</h1>
+         <router-link to="/">Login</router-link> or <router-link to="/admin">Register</router-link> to access the dashboard.
+       </div>
       </main>
     </div>
   </div>
@@ -39,18 +52,22 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { app } from "@/firebase/config";
 
 export default {
-  name: 'dashboard',
-  setup() {
-
-    const logout = async () => {
+  data() {
+    return {
+      // Your data properties go here
+    }
+  },
+  methods: {
+    async logouted() {
       try {
         await userSignOut();
-        this.$router.push('/admin');
+        this.$store.dispatch('logout');
+        await this.$router.push('/');
+        location.reload();
       } catch (error) {
         console.error("Error signing out:", error);
       }
-    };
-    return { logout };
+    }
   }
 }
 </script>
@@ -83,7 +100,7 @@ export default {
   overflow-y: auto;
 }
 
-.dashboardAdmin .adminactive{
+.dashboardAdmin .adminactive {
   color: brown;
   background: #fff;
   transition: 1s;
@@ -91,7 +108,8 @@ export default {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-.dashboardAdmin .adminnonactive{
+
+.dashboardAdmin .adminnonactive {
   color: black;
 }
 </style>
