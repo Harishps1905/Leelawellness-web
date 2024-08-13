@@ -2,9 +2,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  top: 0 !important;
-}
 /* get rids of the banner at the bottom of the web page */
 .translated-ltr {
   visibility: hidden !important;
@@ -14,11 +11,24 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+.container{
+  padding-left: 0px !important;
+  padding-right: 0px!important;
+}
 /* src/assets/styles.css or any global stylesheet */
 
-.header-2 {
-  background-image: linear-gradient(to right, #dd850a, #ffffff);
-  color: white;
-  transition: 0.3s;
-} 
+/* homepage */
+
+.herobg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/hero-99.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lineherobg {
+  background:
+      url('../assets/images/line.png') repeat-x center;
+  background-size: contain;
+  height: 50px
+}
