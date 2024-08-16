@@ -1,7 +1,7 @@
 <template>
     <header style="z-index: 1;" data-aos="fade-in" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
         <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection">
-            <span class="text-white">hello</span>
+            <span class="text-white text-center para_text">Free shipping on orders over AED 500 | Use the discount code "NEW30" to get 30% extra discount</span>
         </div>
         <nav class="navbar navbar-default p-0">
             <div class="container p-0">
@@ -18,19 +18,19 @@
                             </div>
                         </div>
                         <div class="d-none d-lg-block">
-                            <ul class="d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0">
+                            <ul class="nav_list d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0">
                                 <li>Home</li>
                                 <li>About</li>
                                 <li>contacts</li>
                                 <li>Products</li>
-                                <button class="btn-warning text-white btn rounded-0">Inquire Now</button>
+                                <button class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</button>
                                 
                             </ul>
                             
                         </div>
-                        <div class="position-relative ms-4">
+                        <div class="position-relative ms-4 nav_list">
                                     <i class="bi bi-cart fs-5"></i>
-                                    <span style="top: -14px; right: -15px;" class="position-absolute bg-dark text-white rounded circled px-1">1</span>
+                                    <span style="top: -17px; right: -20px;" class="position-absolute grad_btn text-white rounded-circle px-2">1</span>
                                 </div>
                     </div>
                 </div>
@@ -106,12 +106,13 @@ header {
 }
 .subheadsection{
     background: linear-gradient(to bottom right, hsl(358.72deg 79.66% 23.14%), hsl(358.26deg 85.19% 52.35%));
-  transition: opacity 0.3s ease, height 0.3s ease;
+    transition: opacity 0.3s ease, height 0.3s ease;
     opacity: 1;
     height: 40px; /* Adjust as per your header's height */
     overflow: hidden;
     border-bottom: 2px dotted hsl(31, 100%, 50%);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 </style>

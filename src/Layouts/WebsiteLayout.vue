@@ -6,7 +6,7 @@
     <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container-fluid p-0">
 
-<footer class="text-white text-center text-lg-start bg-success">
+<footer class="text-white text-center text-lg-start bg-dark">
 <!-- Grid container -->
 <div class="container p-4">
   <!--Grid row-->

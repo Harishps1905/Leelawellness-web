@@ -1,6 +1,11 @@
 :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --template-color-1:#fff;
+  --template-color-2:#000;
+  --template-color-3:#b29016;
+  --template-color-grad: linear-gradient(to right, rgba(255, 246, 144, 0.906), rgba(255,0,0,1));
+
 }
 /* get rids of the banner at the bottom of the web page */
 .translated-ltr {
@@ -20,8 +25,8 @@
 /* homepage */
 
 .herobg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/hero-99.png');
-  background-position: bottom;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.webp');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -31,4 +36,29 @@
       url('../assets/images/line.png') repeat-x center;
   background-size: contain;
   height: 50px
+}
+
+.main_headline{
+  font-size: clamp(40px, 4vw ,70px);
+}
+.sub_main_headline{
+  font-size: clamp(30px, 4vw ,40px);
+}
+.sub_header{
+  font-size: clamp(20px, 4vw ,30px);
+}
+.para_header{
+  font-size: clamp(15px, 3vw ,25px);
+}
+.para_text{
+  font-size: clamp(12px, 3vw ,18px);
+}
+.nav_list{
+  font-size: 20px;
+}
+.grad_btn{
+  background-image: var(--template-color-grad);
+  color: var(--template-color-1);
+  font-size: 20px;
+  border: 2px groove var(--template-color-3);
 }

@@ -144,7 +144,7 @@ export default {
       }
     },
     async addProduct() {
-      this.obj.id=1++;
+      // this.obj.id=1++;
       try {
         
         let added = await addProduct(this.obj);
