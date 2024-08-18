@@ -42,9 +42,9 @@
 
     <HerbalWellness />
 
-    <section class="my-5 p">
+    <section class="my-5">
         <div class="whyLeela">
-            <div class="container h-100">
+            <div class="container h-100 py-5">
                 <div class="row align-items-center justify-content-center h-100">
                     <div class="col-10">
                         <h1 class="text-center sub_main_headline">Why Should I Buy Shilajit?</h1>
@@ -65,13 +65,13 @@
         <div class="container my-5">
             <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Products</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <div class="col prod_img">
+                <div class="col prod_img" v-for="(prod, index) in this.$store.state.products">
                     <div class="card h-100 shadow-sm border-0">
                         <img src="../assets/images/Leela-36_Cap-3D-Mockup--Side-1__1_-removebg-preview.png"
                             class="card-img-top" alt="Product 3">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Himalayan Product 1</h5>
-                            <p class="card-text">$29.99</p>
+                            <h5 class="card-title">{{prod.productname}}</h5>
+                            <p class="card-text">${{prod.price}}</p>
                             <button class="btn btn-dark rounded-0 para_text w-100">Add to Cart</button>
                         </div>
                     </div>
@@ -87,27 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col prod_img">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="../assets/images/himlayanprod_3.png" class="card-img-top" alt="Himalayan Product 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Himalayan Product 4</h5>
-                            <p class="card-text">$39.99</p>
-                            <button class="btn btn-dark rounded-0 para_text w-100">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col prod_img">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="../assets/images/Leela-36_Cap-3D-Mockup--Side-1__1_-removebg-preview.png"
-                            class="card-img-top" alt="Himalayan Product 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Himalayan Product 2</h5>
-                            <p class="card-text">$34.99</p>
-                            <button class="btn btn-dark rounded-0 para_text w-100">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
@@ -160,7 +140,8 @@ export default {
     components: {
         ChoosingLeela,
         HerbalWellness
-    }
+    },
+
 }
 </script>
 
@@ -168,7 +149,7 @@ export default {
 .whyLeela {
     background: url('../assets/images/whyleela.png') no-repeat center;
     background-size: cover;
-    height: 50vh
+   padding: 50px 0px;
 }
 
 .prod_img img {

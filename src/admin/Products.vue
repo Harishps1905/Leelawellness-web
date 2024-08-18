@@ -99,19 +99,13 @@ export default {
       },
     }
   },
-  methods: {
-    created() {
+  created() {
     const auth = getAuth();
-    // onAuthStateChanged(auth, (user) => {
-    //   if (user) {
-    //     console.log("User is signed in:", user.uid);
     this.fetchProducts();
-    //   } else {
-    //     console.log("No user is signed in.");
-    //     // Redirect to login page or show an error
-    //   }
-    // });
+   
   },
+  methods: {
+    
     async fetchProducts() {
       this.loading = true;
       this.error = null;

@@ -67,7 +67,11 @@ export default {
       } catch (error) {
         console.error("Error signing out:", error);
       }
-    }
+    },
+    // closeOffcanvas() {
+    //   this.$refs.closeButton.click();
+    // },
+    
   }
 }
 </script>

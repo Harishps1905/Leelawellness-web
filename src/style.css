@@ -4,6 +4,8 @@
   --template-color-1:#fff;
   --template-color-2:#000;
   --template-color-3:#b29016;
+  --template-color-4:#999;
+  --template-color-5:#383838;
   --template-color-grad: linear-gradient(to right, rgb(255, 248, 175), rgba(255, 0, 0, 0.853));
 
 }
@@ -23,20 +25,20 @@
 /* src/assets/styles.css or any global stylesheet */
 
 /* homepage */
-
-.herobg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.webp');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.headline_color{
+  color: var(--template-color-2);
+}
+.headline_color_1{
+  color: var(--template-color-3);
+}
+.headline_color_2{
+  color: var(--template-color-4);
+}
+.headline_color_3{
+  color: var(--template-color-5);
+  -webkit-text-stroke: 0.1px rgb(168, 168, 168)
 }
 
-.lineherobg {
-  background:
-      url('../assets/images/line.png') repeat-x center;
-  background-size: contain;
-  height: 50px
-}
 
 .main_headline{
   font-size: clamp(40px, 4vw ,70px);
@@ -51,14 +53,29 @@
   font-size: clamp(15px, 3vw ,25px);
 }
 .para_text{
-  font-size: clamp(12px, 3vw ,18px);
+  font-size: clamp(12px, 3vw ,16px);
 }
 .nav_list{
-  font-size: 20px;
+  font-size: 18px;
 }
 .grad_btn{
   background-image: var(--template-color-grad);
   color: var(--template-color-1);
-  font-size: 20px;
+  font-size: 18px;
   border: 2px groove var(--template-color-3);
+}
+
+/* ?HOMEPAGE */
+.herobg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lineherobg {
+  background:
+      url('../assets/images/line.png') repeat-x center;
+  background-size: contain;
+  height: 50px
 }

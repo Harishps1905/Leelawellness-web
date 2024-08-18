@@ -19,10 +19,10 @@
                         </div>
                         <div class="d-none d-lg-block">
                             <ul class="nav_list d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0">
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>contacts</li>
-                                <li>Products</li>
+                                <div class="" @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'Landing', 'headline_color_3': $route.name !== 'Landing' }">Home</div>
+                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'about', 'headline_color_3': $route.name !== 'about' }">About</div>
+                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'contact', 'headline_color_3': $route.name !== 'contact' }">Contact</div>
+                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
                                 <button class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</button>
                                 
                             </ul>
@@ -76,6 +76,9 @@ export default {
         handleScroll() {
             this.isScrolled = window.scrollY >= 60;
         },
+        pageRoute(link) { // Close offcanvas before navigating
+      this.$router.push(link);
+    },
     }
 };
 </script>
@@ -90,13 +93,12 @@ header {
 }
 .scrolled {
      background: hsla(0, 0%, 0%, 0.823); 
-     color: #fff !important;
 }
 .logo_img{
-    width: 80px;
+    width: 60px;
 }
 .scrolled .logo_img{
-    width: 60px;
+    width: 50px;
     transition: 0.3s ease-in;
     
 }

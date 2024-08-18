@@ -83,7 +83,7 @@
                     <div class="col-lg-4 my-4 ps-1 p-0"> <!-- Add padding-start (ps) for gap -->
                         <div class="card bg-dark p-4 d-flex text-white align-items-center justify-content-center">
                             
-                            <h3 class="sub_header">Marijuana Shop</h3>
+                            <h3 class="sub_header text-dark">Marijuana Shop</h3>
                                     <p class="para_text text-center">Amet massa vitae tortor condimentum lacinia quis vel eros. Aliquet nibh praesent tristique magna sit amet purus gravida.</p>
                                     <span class="para_text text-center">- Assured by CEO of company</span>
                                     <button class="btn grad_btn px-5 py-2 mt-4 text-white">Shop Now</button>
@@ -160,5 +160,6 @@ export default {
     background: linear-gradient(90deg,#ffd0357a,#ffd0354d);
     border: none;
     border-radius: 18px;
+    border: 2px dotted gold;
 }
 </style>
