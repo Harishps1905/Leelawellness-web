@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="d-none d-lg-block">
-                            <ul class="nav_list d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0">
+                            <ul class="nav_list d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0 cursor">
                                 <div class="" @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'Landing', 'headline_color_3': $route.name !== 'Landing' }">Home</div>
                                 <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'about', 'headline_color_3': $route.name !== 'about' }">About</div>
                                 <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'contact', 'headline_color_3': $route.name !== 'contact' }">Contact</div>

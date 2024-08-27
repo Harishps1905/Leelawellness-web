@@ -25,7 +25,7 @@
         <div class="container p-0">
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-center flex-column gap-4">
+                    <div class="d-flex align-items-center justify-content-center flex-column gap-4" data-aos="fade-down">
                         <h1 class="sub_main_headline">WELCOME TO LEELA SHILAJITH</h1>
                         <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you
                             need to live life at your optimum. We’re tired of seeing artificial compounds touted as
@@ -46,7 +46,7 @@
         <div class="whyLeela">
             <div class="container h-100 py-5">
                 <div class="row align-items-center justify-content-center h-100">
-                    <div class="col-10">
+                    <div class="col-10" data-aos="fade-in">
                         <h1 class="text-center sub_main_headline">Why Should I Buy Shilajit?</h1>
                         <p class="text-center para_header mt-5">Everything in nature is connected and designed to keep
                             all of life balanced. However, it is best to consume naturally made, unprocessed products
@@ -62,7 +62,7 @@
     </section>
 
     <section class="my-5">
-        <div class="container my-5">
+        <div class="container my-5" data-aos="fade-in">
             <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Products</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 <div class="col prod_img" v-for="(prod, index) in this.$store.state.products">
@@ -87,20 +87,19 @@
                         </div>
                     </div>
                 </div>
-                
+  
             </div>
         </div>
-
     </section>
 
     <section class="my-5 py-5">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="fade-down">
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                     <h1 class="text-uppercase sub_main_headline">Our Shilajit is Potent and Pure</h1>
                     <img src="@/assets/images/shilaj-1.webp" class="img-fluid" alt="">
                 </div>
-                <div
+                <div  
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/howdoesitwork.png" class="img-fluid" alt="">
                     <div>
@@ -109,7 +108,7 @@
                             only learn about daily dosage, but also about certain factors you need to avoid.</p>
                     </div>
                 </div>
-                <div
+                <div  
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/howtouse.jpg" class="img-fluid" alt="">
                     <div>
@@ -118,7 +117,7 @@
                             only learn about daily dosage, but also about certain factors you need to avoid.</p>
                     </div>
                 </div>
-                <div
+                <div  
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/isitsafe.png" class="img-fluid" alt="">
                     <div>

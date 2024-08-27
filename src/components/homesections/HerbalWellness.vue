@@ -5,14 +5,14 @@
                 <div class="news-ticker px-5 mb-5" style="border-radius: 18px;">
                     <div class="ticker-wrap ">
                         <div class="ticker-move">
-                            <div class="ticker-item" v-for="news in newsItems" :key="news">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="para_header">{{ news }}</div>
-                                    <div class="px-4">
-                                        <img style="width: 40px;" class="" src="@/assets/images/newsreadericon.png" alt="newsreadericon">
-                                    </div>
+                            <marquee>
+                                <div class="d-flex sub_header fs-5">
+                                    <span>MindHarvest Wellness Launches New Product Line</span>
+                                    <span>CultivateWell Introduces New Wellness Programs</span>
+                                    <span>Elevate Naturals Expands to New Markets</span>
+                                    <span>MindHarvest Wellness Launches New Product Line</span>
                                 </div>
-                            </div>
+                            </marquee>
                         </div>
                     </div>
                 </div>
@@ -97,22 +97,7 @@
 
 <script>
 export default {
-    data() {
-        return {
-            newsItems: [
-                "MindHarvest Wellness Launches New Product Line",
-                "Elevate Naturals Expands to New Markets",
-                "HarvestMind Health Partners with Leading Researchers",
-                "CultivateWell Introduces New Wellness Programs",
-                "Natural Elevation Reports Record Growth",
-                "MindHarvest Wellness Launches New Product Line",
-                "Elevate Naturals Expands to New Markets",
-                "HarvestMind Health Partners with Leading Researchers",
-                "CultivateWell Introduces New Wellness Programs",
-                "Natural Elevation Reports Record Growth",
-            ]
-        };
-    }
+    
 };
 </script>
 
@@ -146,15 +131,6 @@ export default {
     font-size: 1.2rem;
 }
 
-@keyframes ticker {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
 .newsreadsection .card{
     height:350px;
     background: linear-gradient(90deg,#ffd0357a,#ffd0354d);

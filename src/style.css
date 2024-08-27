@@ -23,7 +23,9 @@
   padding-right: 0px!important;
 }
 /* src/assets/styles.css or any global stylesheet */
-
+.cursor{
+  cursor: pointer;
+}
 /* homepage */
 .headline_color{
   color: var(--template-color-2);

@@ -72,4 +72,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+li a{
+  color: var(--template-color-5);
+  text-decoration: none;
+}
+a{
+  color: var(--template-color-5);
+  text-decoration: none;
+
+}</style>
