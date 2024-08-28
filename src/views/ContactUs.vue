@@ -1,7 +1,7 @@
 <template>
     <section class="page-banner">
         <object>
-            <img class="img-fluid w-100" style="height: 40vh;" src="../assets/images/mantas-sinkevicius-ary5wXnNR1I-unsplash.jpg" />
+            <!-- <img class="img-fluid w-100" style="height: 40vh;" src="../assets/images/mantas-sinkevicius-ary5wXnNR1I-unsplash.jpg" /> -->
         </object>
     </section>
     <section class="bg-black pt-4 pb-5">

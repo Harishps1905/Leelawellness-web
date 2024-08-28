@@ -8,13 +8,16 @@
         {{ product.price }}
         {{ product.productname }}
         {{ product.ingredients }}
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete" @click="deleteProduct(product.id)">Delete</button>
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="loadProduct(product)">Edit</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete"
+          @click="deleteProduct(product.id)">Delete</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          @click="loadProduct(product)">Edit</button>
       </div>
       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#added">Add Product</button>
     </div>
   </div>
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -36,11 +39,12 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="added" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="added" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5">Edit Product</h1>
+          <h1 class="modal-title fs-5">Add Product</h1>
           <button type="button" ref="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -58,7 +62,8 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -94,7 +99,13 @@ export default {
       },
     }
   },
+  created() {
+    const auth = getAuth();
+    this.fetchProducts();
+   
+  },
   methods: {
+    
     async fetchProducts() {
       this.loading = true;
       this.error = null;
@@ -108,20 +119,7 @@ export default {
         this.loading = false;
       }
     },
-    async deleteProduct(id) {
-      this.loading = true;
-      this.error = null;
-      try {
-        const response = await deleteProduct(id);
-        console.log(response);
-        this.products = this.products.filter(product => product.id !== id);
-      } catch (error) {
-        console.error("Error deleting product:", error);
-        this.error = "Failed to delete product. Please try again later.";
-      } finally {
-        this.loading = false;
-      }
-    },
+
     loadProduct(product) {
       this.obj = { ...product };
       console.log(this.obj);
@@ -140,28 +138,33 @@ export default {
       }
     },
     async addProduct() {
-  try {
-    let added = await addProduct(this.obj);
-    console.log(added, 'added');
-    this.products.push({ ...this.obj });
-    this.$refs.closeButton.click();
-  } catch (err) {
-    console.error("Error adding product:", err.code, err.message);
-    // Display a user-friendly error message
-  }
-}
+      // this.obj.id=1++;
+      try {
+        
+        let added = await addProduct(this.obj);
+        console.log(added, 'added');
+        this.products.push({ ...this.obj });
+        this.$refs.closeButton.click();
+      } catch (err) {
+        console.error("Error adding product:", err.code, err.message);
+        // Display a user-friendly error message
+      }
+    }
   },
-  created() {
-  const auth = getAuth();
-  // onAuthStateChanged(auth, (user) => {
-  //   if (user) {
-  //     console.log("User is signed in:", user.uid);
-      this.fetchProducts();
-  //   } else {
-  //     console.log("No user is signed in.");
-  //     // Redirect to login page or show an error
-  //   }
-  // });
-}
+  async deleteProduct(id) {
+      this.loading = true;
+      this.error = null;
+      try {
+        const response = await deleteProduct(id);
+        console.log(response);
+        this.products = this.products.filter(product => product.id !== id);
+      } catch (error) {
+        console.error("Error deleting product:", error);
+        this.error = "Failed to delete product. Please try again later.";
+      } finally {
+        this.loading = false;
+      }
+    },
+  
 }
 </script>

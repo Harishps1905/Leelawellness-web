@@ -5,6 +5,7 @@ export default createStore({
   state: {
     auth: false,
     cartproduct: [],
+    products:[],
     ProdIncrement: 0,
     ProdDecrement: 0,
   },
@@ -14,6 +15,9 @@ export default createStore({
     },
     ADD_TO_CART(state, product) {
       state.cartproduct.push(product);
+    },
+    GET_PROD(state, data) {
+      state.products=data;
     },
     incrementProduct(state, data) {
       state.ProdIncrement = data;
