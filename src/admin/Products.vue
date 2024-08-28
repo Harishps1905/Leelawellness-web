@@ -53,6 +53,14 @@
             <input type="text" v-model="obj.productname" placeholder="Product Name">
             <input type="number" v-model="obj.price" placeholder="Product Price">
             <input type="text" v-model="obj.ingredients" placeholder="Ingredients">
+            <!-- File Input Field -->
+            <input type="file" @change="onFileChange" accept=".png, .jpg, .jpeg" />
+            <!-- Display Selected File Name -->
+            <p v-if="file">Selected File: {{ file.name }}</p>
+            <!-- Display File Preview if Available -->
+            <div v-if="obj.imageUrl">
+              <img :src="obj.imageUrl" alt="File Preview" style="max-width: 200px; margin-top: 10px;" />
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -83,6 +91,7 @@
 <script>
 import { getProducts, deleteProduct, updateProduct, addProduct } from "@/firebase/db";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { uploadImage } from "@/firebase/utils/uploadImage";
 
 export default {
   name: 'products',
@@ -91,21 +100,40 @@ export default {
       products: [],
       loading: false,
       error: null,
+      file: null,        // Holds the selected file
       obj: {
         id: "",
         productname: "",
         price: null,
         ingredients: "",
+        imageUrl: null,
       },
     }
   },
   created() {
     const auth = getAuth();
     this.fetchProducts();
-   
+
   },
   methods: {
-    
+    // Method triggered on file selection
+    async onFileChange(event) {
+      const selectedFile = event.target.files[0]; // Get the selected file
+
+      // Check if a file was selected and if it's a valid image type
+      if (selectedFile && (selectedFile.type === 'image/png' || selectedFile.type === 'image/jpeg')) {
+        this.file = selectedFile; // Update the file in data
+        // URL.createObjectURL(this.file);
+        // Create a URL for the selected file to display a preview
+        this.obj.imageUrl = await uploadImage(selectedFile);
+        console.log("this.obj.imageUrl", this.obj.imageUrl);
+        
+      } else {
+        alert('Please select a valid PNG or JPG file.');
+        this.file = null;
+        this.obj.imageUrl = null;
+      }
+    },
     async fetchProducts() {
       this.loading = true;
       this.error = null;
@@ -140,7 +168,7 @@ export default {
     async addProduct() {
       // this.obj.id=1++;
       try {
-        
+
         let added = await addProduct(this.obj);
         console.log(added, 'added');
         this.products.push({ ...this.obj });
@@ -152,19 +180,19 @@ export default {
     }
   },
   async deleteProduct(id) {
-      this.loading = true;
-      this.error = null;
-      try {
-        const response = await deleteProduct(id);
-        console.log(response);
-        this.products = this.products.filter(product => product.id !== id);
-      } catch (error) {
-        console.error("Error deleting product:", error);
-        this.error = "Failed to delete product. Please try again later.";
-      } finally {
-        this.loading = false;
-      }
-    },
-  
+    this.loading = true;
+    this.error = null;
+    try {
+      const response = await deleteProduct(id);
+      console.log(response);
+      this.products = this.products.filter(product => product.id !== id);
+    } catch (error) {
+      console.error("Error deleting product:", error);
+      this.error = "Failed to delete product. Please try again later.";
+    } finally {
+      this.loading = false;
+    }
+  },
+
 }
 </script>
