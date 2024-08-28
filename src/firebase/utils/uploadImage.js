@@ -15,12 +15,11 @@ const storage = getStorage();
 const db = getFirestore(app);
 
 // Function to upload an image and store the reference in Firestore
-export const uploadImage = async (file) => {
+export const uploadImage = async (file, filename) => {
   try {
     getAuth(app);
     // Create a reference to the image in Cloud Storage
-    const storageRef = ref(storage, "product/images/" + file.name);
-    console.log("storageRef :" + storageRef);
+    const storageRef = ref(storage, "product/images/" + filename);
 
     const uploadTask = uploadBytesResumable(storageRef, file);
 

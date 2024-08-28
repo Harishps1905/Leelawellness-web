@@ -30,6 +30,14 @@
             <input type="text" v-model="obj.productname" placeholder="Product Name">
             <input type="number" v-model="obj.price" placeholder="Product Price">
             <input type="text" v-model="obj.ingredients" placeholder="Ingredients">
+            <!-- File Input Field -->
+            <input type="file" @change="onFileChange" accept=".png, .jpg, .jpeg" />
+            <!-- Display Selected File Name -->
+            <p v-if="file">Selected File: {{ file.name }}</p>
+            <!-- Display File Preview if Available -->
+            <div v-if="obj.imageUrl">
+              <img :src="obj.imageUrl" alt="File Preview" style="max-width: 200px; margin-top: 10px;" />
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -107,6 +115,9 @@ export default {
         price: null,
         ingredients: "",
         imageUrl: null,
+        // imageUrlTwo: null,
+        // imageUrlThree: null,
+        // imageUrlFour: null,
       },
     }
   },
@@ -121,15 +132,15 @@ export default {
       const selectedFile = event.target.files[0]; // Get the selected file
 
       // Check if a file was selected and if it's a valid image type
-      if (selectedFile && (selectedFile.type === 'image/png' || selectedFile.type === 'image/jpeg')) {
+      if (selectedFile && (selectedFile.type === 'image/png' || selectedFile.type === 'image/jpeg') && this.obj.productname !== "") {
         this.file = selectedFile; // Update the file in data
         // URL.createObjectURL(this.file);
         // Create a URL for the selected file to display a preview
-        this.obj.imageUrl = await uploadImage(selectedFile);
+        this.obj.imageUrl = await uploadImage(selectedFile, this.obj.productname);
         console.log("this.obj.imageUrl", this.obj.imageUrl);
         
       } else {
-        alert('Please select a valid PNG or JPG file.');
+        alert('Please select a valid PNG or JPG file and Provide Product Name');
         this.file = null;
         this.obj.imageUrl = null;
       }
