@@ -2,8 +2,10 @@
     <footer class="py-5" style="background: #3c3c3c21;">
   <div class="container">
     <div class="row">
-      <!-- My Account -->
-      <div class="col-md-3 text-dark">
+  <div class="col-12">
+    <div class="row">
+          <!-- My Account -->
+          <div class="col-12 col-md-3 text-dark p-0">
         <h5>My Account</h5>
         <ul class="list-unstyled">
           <li><a href="#">My Account</a></li>
@@ -16,7 +18,7 @@
       </div>
 
       <!-- Information -->
-      <div class="col-md-3 text-dark">
+      <div class="col-12 col-md-3 text-dark p-0">
         <h5>Information</h5>
         <ul class="list-unstyled">
           <li><a href="#">About Us</a></li>
@@ -29,7 +31,7 @@
       </div>
 
       <!-- Contact Us -->
-      <div class="col-md-3 text-dark">
+      <div class="col-12 col-md-3 text-dark p-0">
         <h5>Contact Us</h5>
         <address>
           Your current address goes to here, 120 example, country.<br>
@@ -41,7 +43,7 @@
       </div>
 
       <!-- Find Us -->
-      <div class="col-md-3 text-dark">
+      <div class="col-12 col-md-3  text-dark p-0">
         <h5>Find us</h5>
         <p>Your Description goes to here you can find us here</p>
         <div>
@@ -53,11 +55,13 @@
         </div>
       </div>
     </div>
+  </div>
+    </div>
 
-    <div class="d-flex justify-content-between text-center py-3 mt-4 border-top">
+    <div class="d-flex flex-column flex-lg-row justify-content-between text-center py-3 mt-4 border-top">
       <p class="mb-0 text-dark">&copy; SabujCha. All Rights Reserved</p>
       <div class="d-flex justify-content-center">
-        <img src="../assets/images/payment.webp" alt="" srcset="">
+        <img class="img-fluid" src="../assets/images/payment.webp" alt="" srcset="">
       </div>
     </div>
   </div>
