@@ -28,10 +28,7 @@
                             </ul>
                             
                         </div>
-                        <div class="position-relative ms-4 nav_list">
-                                    <i class="bi bi-cart fs-5"></i>
-                                    <span style="top: -17px; right: -20px;" class="position-absolute grad_btn text-white rounded-circle px-2">1</span>
-                                </div>
+                       
                     </div>
                 </div>
             </div>

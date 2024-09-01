@@ -56,12 +56,12 @@
     data() {
       return {
         productDetails: null,
-        whatsappNumber: "9884259035",
+        whatsappNumber: "+917092516282",
       }
     },
     methods:{
       sendToWhatsApp() {
-      const message = `Product: ${this.productDetails.id}\nDescription: ${this.productDetails.productname}\n Price: ${this.productDetails.price}`;
+      const message = `Product: ${this.productDetails.id}\nDescription: ${this.productDetails.productname}\n Price: ${this.productDetails.price}\n[View Image](${this.productDetails.imageUrl}`;
       const url = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     },
