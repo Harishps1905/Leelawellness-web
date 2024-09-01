@@ -22,7 +22,7 @@
                                 <div class="" @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'Landing', 'headline_color_3': $route.name !== 'Landing' }">Home</div>
                                 <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'about', 'headline_color_3': $route.name !== 'about' }">About</div>
                                 <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'contact', 'headline_color_3': $route.name !== 'contact' }">Contact</div>
-                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
+                                <div @click="pageRoute('/products')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
                                 <button class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</button>
                                 
                             </ul>

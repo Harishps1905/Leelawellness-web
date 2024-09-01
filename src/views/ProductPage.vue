@@ -1,31 +1,36 @@
 <template>
-    <div class="product-page">
-      <div class="container">
-        <div class="products-grid">
-          <div class="product-card" v-for="product in products" :key="product.id">
-            <router-link :to="{ name: 'ProductPageDesc', params: { id: product.id } }">
-              <img :src="product.imageUrl" alt="Product Image" class="product-image" />
-            </router-link>
-            <div class="product-info">
-              <h5 class="product-title">{{ product.productname }}</h5>
-              <p class="product-ingredients">{{ product.ingredients }}</p>
-              <div class="product-footer">
-                <span class="product-price">${{ product.price }}</span>
-                <button v-if="!isInCart(product.id)" @click="addtoCart(product)" class="btn-add-cart">
-                  Add to cart
-                </button>
-                <button v-else class="btn-added" disabled>
-                  Added
-                </button>
-              </div>
+      <section class="my-5">
+        <div class="container my-5" data-aos="fade-in">
+            <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Products</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col prod_img" v-for="(prod, index) in this.$store.state.products">
+                  <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img :src="prod.imageUrl"
+                            class="card-img-top" alt="Product 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{prod.productname}}</h5>
+                            <p class="card-text">${{prod.price}}</p>
+                            <button class="btn btn-dark rounded-0 para_text w-100">Buy Now</button>
+                        </div>
+                    </div>
+                  </router-link>
+                </div>
+
+                <div class="col prod_img">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="../assets/images/runningImg.png" class="card-img-top" alt="Himalayan Product 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Himalayan Product 3</h5>
+                            <p class="card-text">$24.99</p>
+                            <button class="btn btn-dark rounded-0 para_text w-100">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+  
             </div>
-          </div>
         </div>
-        <router-link to="/cart" class="cart-button">
-          {{ this.$store.state.cartproduct.length }} items in cart
-        </router-link>
-      </div>
-    </div>
+    </section>
   </template>
   
   <script>
@@ -60,116 +65,3 @@
     },
   };
   </script>
-  
-  <style scoped>
-  .product-page {
-    padding-top: 112px;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .product-info {
-    padding: 15px;
-  }
-  
-  .product-title {
-    font-size: 1.1rem;
-    margin: 0 0 10px;
-  }
-  
-  .product-ingredients {
-    font-size: 0.9rem;
-    color: #777;
-    margin: 0 0 15px;
-  }
-  
-  .product-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .product-price {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .btn-add-cart,
-  .btn-added {
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-add-cart {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .btn-added {
-    background-color: #ccc;
-    color: #666;
-  }
-  
-  .cart-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .cart-button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .product-image {
-      height: 150px;
-    }
-  
-    .cart-button {
-      width: 100%;
-      bottom: 0;
-      right: 0;
-      border-radius: 0;
-      text-align: center;
-    }
-  }
-  </style>
-  

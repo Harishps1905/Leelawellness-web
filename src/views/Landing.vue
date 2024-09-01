@@ -27,13 +27,8 @@
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center flex-column gap-4" data-aos="fade-down">
                         <h1 class="sub_main_headline">WELCOME TO LEELA SHILAJITH</h1>
-                        <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you
-                            need to live life at your optimum. We’re tired of seeing artificial compounds touted as
-                            “healthy” supplements. We believe the healthiest supplements available on planet earth are
-                            those produced by mother nature, and not by scientists in a lab.</p>
-                        <p class="para_header text-center">That’s why we set out on our mission to bring Primul Shilajit
-                            to the mainstream by educating consumers on the immense benefits contained within this 100%
-                            natural and time-tested resin.</p>
+                        <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you need to live life at your optimum. We’re tired of seeing artificial compounds touted as “healthy” supplements. We believe the healthiest supplements available on planet earth are those produced by mother nature, and not by scientists in a lab.</p>
+                        <p class="para_header text-center">That’s why we set out on our mission to bring Primul Shilajit to the mainstream by educating consumers on the immense benefits contained within this 100% natural and time-tested resin.</p>
                     </div>
                 </div>
             </div>
@@ -61,36 +56,7 @@
         </div>
     </section>
 
-    <section class="my-5">
-        <div class="container my-5" data-aos="fade-in">
-            <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Products</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <div class="col prod_img" v-for="(prod, index) in this.$store.state.products">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="../assets/images/Leela-36_Cap-3D-Mockup--Side-1__1_-removebg-preview.png"
-                            class="card-img-top" alt="Product 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">{{prod.productname}}</h5>
-                            <p class="card-text">${{prod.price}}</p>
-                            <button class="btn btn-dark rounded-0 para_text w-100">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col prod_img">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="../assets/images/runningImg.png" class="card-img-top" alt="Himalayan Product 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Himalayan Product 3</h5>
-                            <p class="card-text">$24.99</p>
-                            <button class="btn btn-dark rounded-0 para_text w-100">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-  
-            </div>
-        </div>
-    </section>
+    <ProductPage/>
 
     <section class="my-5 py-5">
         <div class="container">
@@ -134,17 +100,19 @@
 <script>
 import ChoosingLeela from '@/components/homesections/ChoosingLeela.vue';
 import HerbalWellness from '@/components/homesections/HerbalWellness.vue';
+import ProductPage from '@/views/ProductPage.vue';
 export default {
     name: 'landing',
     components: {
         ChoosingLeela,
-        HerbalWellness
+        HerbalWellness,
+        ProductPage
     },
 
 }
 </script>
 
-<style scoped>
+<style>
 .whyLeela {
     background: url('../assets/images/whyleela.png') no-repeat center;
     background-size: cover;
