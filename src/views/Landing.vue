@@ -1,5 +1,6 @@
 <template>
-    <div class="herobg d-flex align-items-end justify-content-start" style="min-height: 90vh; margin-top: 100px;">
+    <div style="height: 10%;"></div>
+    <div class="herobg d-flex align-items-end justify-content-start" style="min-height: 100vh; ">
         <div class="container p-0 h-100">
             <div class="row h-100">
                 <div data-aos="fade-in"
@@ -7,7 +8,7 @@
                     <h2 class="main_headline">Superior CBD Products</h2>
                     <p class="para_header">Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit.
                         Faucibus a pellentesque sit amet porttitor eget dolor dictum sit amet justo donec enim diam.</p>
-                    <button class="btn grad_btn px-5 py-3 rounded">Shop now</button>
+                    <button class="btn grad_btn px-5 py-2 rounded">Shop now</button>
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-end ">
                     <img data-aos="fade-left" style="padding-bottom: 22px; width: 320px; object-fit: contain;"
@@ -18,6 +19,7 @@
         </div>
 
     </div>
+
     <!-- The Advantages Of Choosing Canza -->
     <ChoosingLeela />
 
@@ -33,6 +35,9 @@
                 </div>
             </div>
         </div>
+        <div class="mt-4 d-flex align-items-center justify-content-center">
+            <button class="grad_btn btn px-5">Know More</button>
+        </div>
     </section>
 
     <HerbalWellness />
@@ -41,7 +46,7 @@
         <div class="whyLeela">
             <div class="container h-100 py-5">
                 <div class="row align-items-center justify-content-center h-100">
-                    <div class="col-10" data-aos="fade-in">
+                    <div class="col-10" data-aos="fade-up">
                         <h1 class="text-center sub_main_headline">Why Should I Buy Shilajit?</h1>
                         <p class="text-center para_header mt-5">Everything in nature is connected and designed to keep
                             all of life balanced. However, it is best to consume naturally made, unprocessed products
@@ -116,12 +121,61 @@ export default {
 .whyLeela {
     background: url('../assets/images/whyleela.png') no-repeat center;
     background-size: cover;
+    background-attachment: fixed    ;
    padding: 50px 0px;
 }
 
-.prod_img img {
+
+.comparison-section {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
     width: 100%;
-    height: 270px;
-    object-fit: contain;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 15px;
+}
+
+.comparison-table thead th {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 18px;
+}
+
+.comparison-table tbody td {
+    border-top: 1px solid #ddd;
+}
+
+.checkmark {
+    color: #4CAF50; /* Green */
+    text-align: center;
+}
+
+.cross {
+    color: #F44336; /* Red */
+    text-align: center;
+}
+
+.comparison-table tbody tr td:first-child {
+    font-weight: bold;
+}
+
+/* Add violet background for the "Thera Hair" column */
+.comparison-table tbody td:nth-child(2),
+.comparison-table thead th:nth-child(2) {
+    background-color: #7a68b3; /* Violet color */
+    border-radius: 0px; /* For rounded corners on the violet background */
+}
+.comparison-table thead th:nth-child(2) {
+    background-color: #7a68b3; /* Violet color */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 </style>

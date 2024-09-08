@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 d-flex flex-column gap-4 p-0">
+                <div data-aos="fade-right" class="col-4 d-flex flex-column gap-4 p-0">
                     <div class="card w-100 d-flex align-items-center px-5 py-3 justify-content-center align-content-center text-center">
                         <img class="w-25 img-fluid bg-warning p-4 rounded-circle" src="@/assets/images/brain.webp" alt="">
                         <div class="pt-4">
@@ -39,11 +39,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 d-flex flex-column px-5 justify-content-center align-items-center">
+                <div data-aos="fade-in" class="col-4 d-flex flex-column px-5 justify-content-center align-items-center">
                     <img src="@/assets/images/Asset_1.webp" alt="premium">
                     <img src="@/assets/images/premium.jpg" alt="premium">
                 </div>
-                <div class="col-4 d-flex flex-column gap-4 p-0">
+                <div data-aos="fade-left" class="col-4 d-flex flex-column gap-4 p-0">
                     <div class="card w-100 d-flex align-items-center px-5 py-3 justify-content-center align-content-center text-center">
                         <img class="w-25 img-fluid bg-warning p-4 rounded-circle" src="@/assets/images/brain.webp" alt="">
                         <div class="pt-4">

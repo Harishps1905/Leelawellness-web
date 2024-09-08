@@ -1,11 +1,11 @@
 <template>
-    <header style="z-index: 1;" data-aos="fade-in" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
+    <header style="z-index: 1;" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
         <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection">
             <span class="text-white text-center para_text">Free shipping on orders over AED 500 | Use the discount code "NEW30" to get 30% extra discount</span>
         </div>
         <nav class="navbar navbar-default p-0">
             <div class="container p-0">
-                <div class="row py-3 w-100">
+                <div class="row py-3 w-100" data-aos="fade-in" >
                     <div class="col-8 col-md-4 col-lg-3 d-flex justify-content-start p-0">
                         <RouterLink class="active text-decoration-none " :to="{ path: '/' }">
                             <img class="img-fluid rounded logo_img" src="@/assets/images/logo/Logo.png" alt="Logo">
@@ -20,8 +20,8 @@
                         <div class="d-none d-lg-block">
                             <ul class="nav_list d-flex align-items-center justify-content-end gap-5 h-100 list-unstyled m-0 cursor">
                                 <div class="" @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'Landing', 'headline_color_3': $route.name !== 'Landing' }">Home</div>
-                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'about', 'headline_color_3': $route.name !== 'about' }">About</div>
-                                <div @click="pageRoute('/')" :class="{headline_color_1 : $route.name === 'contact', 'headline_color_3': $route.name !== 'contact' }">Contact</div>
+                                <div @click="pageRoute('/about-leelashilajith')" :class="{headline_color_1 : $route.name === 'AboutUs', 'headline_color_3': $route.name !== 'AboutUs' }">About Leela</div>
+                                <div @click="pageRoute('/contact-us')" :class="{headline_color_1 : $route.name === 'ContactUs', 'headline_color_3': $route.name !== 'ContactUs' }">Contact</div>
                                 <div @click="pageRoute('/products')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
                                 <button class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</button>
                                 
@@ -92,7 +92,7 @@ header {
      background: hsla(0, 0%, 0%, 0.823); 
 }
 .logo_img{
-    width: 60px;
+    width: 50px;
 }
 .scrolled .logo_img{
     width: 50px;

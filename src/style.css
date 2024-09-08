@@ -45,6 +45,9 @@
 .main_headline{
   font-size: clamp(40px, 4vw ,70px);
 }
+.number{
+  font-size: clamp(130px, 4vw ,160px);
+}
 .sub_main_headline{
   font-size: clamp(30px, 4vw ,40px);
 }
