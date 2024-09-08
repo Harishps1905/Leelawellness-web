@@ -2,6 +2,7 @@
     <header style="z-index: 1;" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
         <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection">
             <span class="text-white text-center para_text">Free shipping on orders over AED 500 | Use the discount code "NEW30" to get 30% extra discount</span>
+         
         </div>
         <nav class="navbar navbar-default p-0">
             <div class="container p-0">
@@ -56,12 +57,16 @@
 
 
 <script>
+
 export default {
     name: 'Header',
     data() {
         return {
             isScrolled: false,
         };
+    },
+    components: {
+        
     },
     mounted() {
         window.addEventListener('scroll', this.handleScroll);

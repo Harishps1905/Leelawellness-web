@@ -4,7 +4,8 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
-  optimizeDeps: {
+  compilerOptions: {
+    isCustomElement: (tag) => tag === 'marquee'
   },
   resolve: {
     alias: {
