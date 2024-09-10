@@ -5,10 +5,11 @@
             <div class="row h-100">
                 <div data-aos="fade-in"
                     class="col-12 col-md-7 d-flex align-items-start text-white flex-column text-start h-100 gap-4">
-                    <h2 class="main_headline">Superior CBD Products</h2>
-                    <p class="para_header">Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit.
-                        Faucibus a pellentesque sit amet porttitor eget dolor dictum sit amet justo donec enim diam.</p>
-                    <button class="btn grad_btn px-5 py-2 rounded">Shop now</button>
+                    <h2 class="main_headline">LEELA SHILAJITH</h2>
+                    <p class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+                    <!-- <button class="btn grad_btn px-5 py-2 rounded">Shop now</button> -->
+                    <RouterLink class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded" :to="{ path: '/products' }">Shop now</RouterLink>
+
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-end ">
                     <img data-aos="fade-left" style="padding-bottom: 22px; width: 320px; object-fit: contain;"

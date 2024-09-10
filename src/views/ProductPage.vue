@@ -7,18 +7,18 @@
                 <div class="col prod_img" v-for="(prod, index) in this.$store.state.products">
                   <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
                     <div class="card h-100 shadow-sm border-0">
-                        <img :src="prod.imageUrl" style="height: 270px; object-fit: cover;"
+                        <img :src="prod.imageUrl" style="height: 270px;"
                             class="img-fluid card-img-top" alt="Product 3">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{prod.productname}}</h5>
-                            <p class="card-text">${{prod.price}}</p>
+                            <p class="card-text">₹{{prod.price}}</p>
                             <button class="btn btn-dark rounded-0 para_text w-100">Buy Now</button>
                         </div>
                     </div>
                   </router-link>
                 </div>
 
-                <div class="col prod_img">
+                <!-- <div class="col prod_img">
                     <div class="card h-100 shadow-sm border-0">
                         <img src="../assets/images/runningImg.png" class="card-img-top" alt="Himalayan Product 3">
                         <div class="card-body text-center">
@@ -27,7 +27,7 @@
                             <button class="btn btn-dark rounded-0 para_text w-100">Buy Now</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
   
             </div>
         </div>

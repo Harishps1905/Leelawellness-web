@@ -22,9 +22,12 @@
             </div>
           </div>
           <div class="my-4">
-            <button class="btn w-100 rounded-0 border-dark btn-success" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i
+            <button class="btn w-100 rounded-0 border-dark btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i
                 class="bi bi-whatsapp"></i></button>
+                <a  href="tel:+917092516282" class="btn w-100 rounded-0 border-dark btn-outline-success">Make A Call To Order</a>
           </div>
+          <h2>Ingredients</h2>
+          <p>Below are the ingredients used</p>
           <p class="product-description"> {{ productDetails.ingredients }} </p>
         </div>
       </div>
