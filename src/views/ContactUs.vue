@@ -1,7 +1,8 @@
 <template>
-    <section class="page-banner">
+    <div style="height: 130px;"></div>
+    <section data-aos="fade-down" class="page-banner">
         <object>
-            <img class="img-fluid w-100" style="height: 40vh;" src="../assets/images/mantas-sinkevicius-ary5wXnNR1I-unsplash.jpg" />
+            <img src="../assets/images/hero-99.png" class="img-fluid" width="100%" height="200px" />
         </object>
     </section>
     <section class="bg-black pt-4 pb-5">
@@ -16,26 +17,28 @@
                         <h3 class="text-uppercase about_headline_color">contact information</h3>
                         <ul style="list-style: none" class="p-0 d-flex flex-column gap-4 pt-4 text-secondary">
                             <li>
-                                <i class="bi bi-phone"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="tel:+971522280076">971-522280076</a>
+                                <i class="bi bi-phone"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
+                                    class="text-decoration-none text-secondary"
+                                    href="tel:+971522280076">971-4444</a>
                             </li>
                             <li>
                                 <i class="bi bi-telephone-fill"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary" href="tel:+971045686600">045686600</a>
+                                    class="text-decoration-none text-secondary" href="tel:+971045686600">345466654576</a>
                             </li>
                             <li>
                                 <i class="bi bi-telephone-fill"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary" href="tel:+971045762246">045762246</a>
+                                    class="text-decoration-none text-secondary" href="tel:+971045762246">24334234324</a>
                             </li>
                             <li>
                                 <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
                                     class="text-decoration-none text-secondary"
-                                    href="mailto:info@9xproduction.com">info@9xproduction.com</a>
+                                    href="mailto:info@9xproduction.com">info@leelashilajith.com</a>
                             </li>
                             <li>
                                 <a class="text-decoration-none text-secondary"
                                     href="https://maps.app.goo.gl/27Z3mRiWQonKLrfN6?g_st=com.google.maps.preview.copy"
                                     target="_blank"><i class="bi bi-geo-alt fs-5"></i>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;Warehouse No. A-28, Al Quoz 1, Dubai
+                                    &nbsp;&nbsp;&nbsp;&nbsp;leelashialajith trisurr
                                 </a>
                             </li>
                         </ul>
@@ -43,7 +46,7 @@
                 </div>
                 <div data-aos="fade-right" class="col-12 col-lg-7 form_bg">
                     <div class="position-relative">
-                        <div>
+                        <div style="top: 90px" class="position-absolute">
                             <form @submit.prevent="quickContactForm"
                                 class="w-100 d-flex flex-column align-items-center justify-content-center">
                                 <div class="py-4">
@@ -52,43 +55,43 @@
                                 <div class="row align-items-center sendus_message w-100 px-1 px-md-4 px-lg-5">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input type="text" placeholder="name" />
-
+                                            <input  type="text" placeholder="name" />
                                         </div>
                                         <div class="col-6">
                                             <select
                                                 class="form-control text-white bg-transparent border-0 border-bottom rounded-0"
-                                                >
+                                                 >
                                                 <option class="text-white" value="" disabled>
                                                     Services
                                                 </option>
-                                                <option class="bg-black" >
-                                                    sss
-                                                </option>
+                                                <option class="bg-black">                                                </option>
                                             </select>
-
                                         </div>
                                     </div>
                                     <div class="row pt-5">
                                         <div class="col-6">
-                                            <input type="email"  placeholder="Email" />
+                                            <input type="email" placeholder="Email" />
+                                             
 
                                         </div>
                                         <div class="col-6">
-                                            <input type="tel" 
+                                            <input type="tel"
                                                 placeholder="Contact Number" />
+                                           
 
                                         </div>
                                     </div>
                                     <div class="col-12 pt-5">
-                                        <textarea 
+                                        <textarea  
                                             placeholder="Message (Optional)"></textarea>
                                     </div>
-                                    <span class="mt-5">
-                                        <button class="rounded py-2 px-5 contact_btn text-white">
+                                    <span class="mt-4">
+                                        <button   class="rounded py-2 px-5 contact_btn text-white">
                                             Submit
                                         </button>
-                                     
+                                        <button  class="rounded py-2 px-5 contact_btn text-white">
+                                            please wait...
+                                        </button>
                                     </span>
                                 </div>
                             </form>
@@ -108,6 +111,7 @@
 
 
 export default {
+
 
 };
 </script>

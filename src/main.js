@@ -5,6 +5,12 @@ import App from './App.vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import store from './store/store';
+import PrimeVue from "primevue/config";
+
+AOS.init({
+  duration: 1000,
+  easing: 'ease',
+});
 
 const storedData = localStorage.getItem('leelashilajith');
 if (storedData) {
@@ -14,14 +20,10 @@ if (storedData) {
 // Create the app instance
 const app = createApp(App);
 app.use(store);
-// Use the router
+app.use(PrimeVue);
 app.use(router);
 
 // Mount the app to the DOM
 app.mount('#app');
 
 // Initialize AOS (Animate On Scroll) library
-AOS.init({
-    duration: 1200,
-    easing: 'ease',
-});

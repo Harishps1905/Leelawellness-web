@@ -22,7 +22,7 @@ const routes = [
                 component: Landing
             },
             {
-                path: '/about',
+                path: '/about-leelashilajith',
                 name: 'AboutUs',
                 component: AboutUs
             },

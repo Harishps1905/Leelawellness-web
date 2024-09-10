@@ -8,13 +8,16 @@
         {{ product.price }}
         {{ product.productname }}
         {{ product.ingredients }}
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete" @click="deleteProduct(product.id)">Delete</button>
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="loadProduct(product)">Edit</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete"
+          @click="deleteProduct(product.id)">Delete</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          @click="loadProduct(product)">Edit</button>
       </div>
       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#added">Add Product</button>
     </div>
   </div>
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -27,6 +30,14 @@
             <input type="text" v-model="obj.productname" placeholder="Product Name">
             <input type="number" v-model="obj.price" placeholder="Product Price">
             <input type="text" v-model="obj.ingredients" placeholder="Ingredients">
+            <!-- File Input Field -->
+            <input type="file" @change="onFileChange" accept=".png, .jpg, .jpeg" />
+            <!-- Display Selected File Name -->
+            <p v-if="file">Selected File: {{ file.name }}</p>
+            <!-- Display File Preview if Available -->
+            <div v-if="obj.imageUrl">
+              <img :src="obj.imageUrl" alt="File Preview" style="max-width: 200px; margin-top: 10px;" />
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -36,11 +47,12 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="added" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="added" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5">Edit Product</h1>
+          <h1 class="modal-title fs-5">Add Product</h1>
           <button type="button" ref="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -49,6 +61,14 @@
             <input type="text" v-model="obj.productname" placeholder="Product Name">
             <input type="number" v-model="obj.price" placeholder="Product Price">
             <input type="text" v-model="obj.ingredients" placeholder="Ingredients">
+            <!-- File Input Field -->
+            <input type="file" @change="onFileChange" accept=".png, .jpg, .jpeg" />
+            <!-- Display Selected File Name -->
+            <p v-if="file">Selected File: {{ file.name }}</p>
+            <!-- Display File Preview if Available -->
+            <div v-if="obj.imageUrl">
+              <img :src="obj.imageUrl" alt="File Preview" style="max-width: 200px; margin-top: 10px;" />
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -58,7 +78,8 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -78,6 +99,7 @@
 <script>
 import { getProducts, deleteProduct, updateProduct, addProduct } from "@/firebase/db";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { uploadImage } from "@/firebase/utils/uploadImage";
 
 export default {
   name: 'products',
@@ -86,15 +108,43 @@ export default {
       products: [],
       loading: false,
       error: null,
+      file: null,        // Holds the selected file
       obj: {
         id: "",
         productname: "",
         price: null,
         ingredients: "",
+        imageUrl: null,
+        // imageUrlTwo: null,
+        // imageUrlThree: null,
+        // imageUrlFour: null,
       },
     }
   },
+  created() {
+    const auth = getAuth();
+    this.fetchProducts();
+
+  },
   methods: {
+    // Method triggered on file selection
+    async onFileChange(event) {
+      const selectedFile = event.target.files[0]; // Get the selected file
+
+      // Check if a file was selected and if it's a valid image type
+      if (selectedFile && (selectedFile.type === 'image/png' || selectedFile.type === 'image/jpeg') && this.obj.productname !== "") {
+        this.file = selectedFile; // Update the file in data
+        // URL.createObjectURL(this.file);
+        // Create a URL for the selected file to display a preview
+        this.obj.imageUrl = await uploadImage(selectedFile, this.obj.productname);
+        console.log("this.obj.imageUrl", this.obj.imageUrl);
+        
+      } else {
+        alert('Please select a valid PNG or JPG file and Provide Product Name');
+        this.file = null;
+        this.obj.imageUrl = null;
+      }
+    },
     async fetchProducts() {
       this.loading = true;
       this.error = null;
@@ -108,20 +158,7 @@ export default {
         this.loading = false;
       }
     },
-    async deleteProduct(id) {
-      this.loading = true;
-      this.error = null;
-      try {
-        const response = await deleteProduct(id);
-        console.log(response);
-        this.products = this.products.filter(product => product.id !== id);
-      } catch (error) {
-        console.error("Error deleting product:", error);
-        this.error = "Failed to delete product. Please try again later.";
-      } finally {
-        this.loading = false;
-      }
-    },
+
     loadProduct(product) {
       this.obj = { ...product };
       console.log(this.obj);
@@ -140,28 +177,33 @@ export default {
       }
     },
     async addProduct() {
-  try {
-    let added = await addProduct(this.obj);
-    console.log(added, 'added');
-    this.products.push({ ...this.obj });
-    this.$refs.closeButton.click();
-  } catch (err) {
-    console.error("Error adding product:", err.code, err.message);
-    // Display a user-friendly error message
-  }
-}
+      // this.obj.id=1++;
+      try {
+
+        let added = await addProduct(this.obj);
+        console.log(added, 'added');
+        this.products.push({ ...this.obj });
+        this.$refs.closeButton.click();
+      } catch (err) {
+        console.error("Error adding product:", err.code, err.message);
+        // Display a user-friendly error message
+      }
+    }
   },
-  created() {
-  const auth = getAuth();
-  // onAuthStateChanged(auth, (user) => {
-  //   if (user) {
-  //     console.log("User is signed in:", user.uid);
-      this.fetchProducts();
-  //   } else {
-  //     console.log("No user is signed in.");
-  //     // Redirect to login page or show an error
-  //   }
-  // });
-}
+  async deleteProduct(id) {
+    this.loading = true;
+    this.error = null;
+    try {
+      const response = await deleteProduct(id);
+      console.log(response);
+      this.products = this.products.filter(product => product.id !== id);
+    } catch (error) {
+      console.error("Error deleting product:", error);
+      this.error = "Failed to delete product. Please try again later.";
+    } finally {
+      this.loading = false;
+    }
+  },
+
 }
 </script>

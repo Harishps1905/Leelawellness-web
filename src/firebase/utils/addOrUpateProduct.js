@@ -4,14 +4,15 @@ import { getFirestore, doc, getDoc, getDocs, collection, query, setDoc  } from "
 const db = getFirestore(app);
 
 
-export const addOrUpateProduct = async ({id, productname, price, ingredients}) => {
+export const addOrUpateProduct = async ({id, productname, price, ingredients, imageUrl}) => {
     try {
-      console.log("id", id);
         const citiesRef = collection(db, "products");
         await setDoc(doc(citiesRef, id), {
             productname: productname,
             price: price,
-            ingredients: ingredients });
+            ingredients: ingredients,
+            imageUrl: imageUrl,
+          });
     } catch (error) {
       throw error;
     }
