@@ -1,7 +1,7 @@
 <template>
   <footer class="py-5 mt-auto bg-light">
     <div class="container">
-      <div class="row">
+      <div class="row m-0">
         <!-- Information -->
         <div class="text-center text-lg-start col-12 col-md-4 text-dark mb-4 mb-md-0">
           <h5>Information</h5>
