@@ -87,6 +87,40 @@ body{
   background-size: contain;
   height: 50px
 }
+.leelabg_hero{
+  width: 350px;
+  height: 550px;
+  object-fit: cover;
+}
+.height10vh{
+  height:10vh;
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .leelabg_hero{
+    width: 170px;
+    height: 310px;
+    object-fit: cover;
+  }
+  .height10vh{
+    height: 18vh;
+  }
+  .productbgall{
+    background-size: auto !important;
+
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+
+  .height10vh{
+    height: 13vh !important;
+  }
+  .leelabg_hero{
+    width: 240px;
+    height: 390px;
+    object-fit: cover;
+  }
+
+}
 .w-50{
   width: 50%;
 }

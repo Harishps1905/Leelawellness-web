@@ -1,7 +1,7 @@
 <template>
     <section class="newsreadsection ">
         <div class="container p-0">
-            <div class="row">
+            <div class="row m-0 px-3 px-lg-0">
                 <div class="news-ticker px-5 mb-5" style="border-radius: 18px;">
                     <div class="ticker-wrap ">
                         <div class="ticker-move">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-right" class="col-12 col-lg-4 d-flex flex-column gap-4 p-0">
+                <div class="col-12 col-lg-4 d-flex flex-column gap-4 p-0">
                     <div class="card w-100 d-flex align-items-center px-5 py-3 justify-content-center align-content-center text-center">
                         <img class="w-25 img-fluid p-2 rounded-circle" src="@/assets/images/Kurunthotti.jpg" alt="">
                         <div class="pt-4">
@@ -45,7 +45,7 @@
                     <img class="img-fluid" src="@/assets/images/Leela-36_Cap1.png" alt="premium">
                     <img class="img-fluid" src="@/assets/images/premium.jpg" alt="premium">
                 </div>
-                <div data-aos="fade-left" class="col-12 col-lg-4 d-flex flex-column gap-4 p-0">
+                <div class="col-12 col-lg-4 d-flex flex-column gap-4 p-0">
                     <div class="card w-100 d-flex align-items-center px-5 py-3 justify-content-center align-content-center text-center">
                         <img class="w-25 img-fluid p-2 rounded-circle" src="@/assets/images/Ashwagandha(1).jpg" alt="">
                         <div class="pt-4">

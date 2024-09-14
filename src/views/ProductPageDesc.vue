@@ -3,7 +3,7 @@
   <section>
     <div style="height: 20vh;"></div>
     <div class="container my-5">
-      <div class="row" v-if="productDetails">
+      <div class="row m-0" v-if="productDetails">
         <div class="col-md-6">
           <img :src="productDetails.imageUrl" class="card-img-top" alt="Product 3">
         </div>
@@ -24,7 +24,7 @@
           <div class="my-4">
             <button class="btn w-100 rounded-0 border-dark btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i
                 class="bi bi-whatsapp"></i></button>
-                <a  href="tel:00914872383834" class="btn w-100 rounded-0 border-dark btn-outline-success">Make A Call To Order</a>
+                <a  href="tel:00914872383834" class="btn w-100 rounded-0 border-dark btn-outline-success"><i class="bi bi-telephone"></i> Make A Call To Order</a>
           </div>
           <h2>Ingredients</h2>
           <p>Below are the ingredients used</p>
