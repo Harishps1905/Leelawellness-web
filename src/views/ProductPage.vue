@@ -2,12 +2,12 @@
       <div class="height10vh"></div>
   <section class="my-5" v-if="$route.name === 'Landing'">
         <div class="container my-5" data-aos="fade-in">
-            <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Products</h2>
+            <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Product</h2>
             <div class="row m-0 justify-content-center g-4">
-                <div class="col-4 prod_img" v-for="(prod, index) in this.$store.state.products">
+                <div class="col-9 col-md-6 col-lg-3 prod_img" v-for="(prod, index) in this.$store.state.products">
                   <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
                     <div class="card h-100 shadow-sm border-0">
-                        <img :src="prod.imageUrl" style="height: 270px;"
+                        <img :src="prod.imageUrl" style="height:400px;"
                             class="img-fluid card-img-top" alt="Product 3">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{prod.productname}}</h5>
@@ -25,7 +25,7 @@
      <div class="productbgall text-white vh-100" v-for="(prod, index) in this.$store.state.products">
       <div class="container h-100">
           <div class="row align-items-center h-100 m-0" >
-              <div class="col-md-6 mb-4 mb-md-0">
+              <div class="col-md-6 mb-lg-4 mb-md-0">
                 <img data-aos="fade-right" src="@/assets/images/Leela-36_Cap1.png" class="img-fluid px-5" alt="Himalayan Product 3">
               </div>
               <div class="col-md-6" data-aos="fade-left">

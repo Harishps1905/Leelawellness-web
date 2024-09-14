@@ -4,6 +4,13 @@
       <div class="row m-0">
         <!-- Information -->
         <div class="text-center text-lg-start col-12 col-md-4 text-dark mb-4 mb-md-0">
+          <RouterLink class="active text-decoration-none " :to="{ path: '/' }">
+            <img class="img-fluid rounded logo_img" width="50px" src="@/assets/images/logo/Logo.png" alt="Logo">
+          </RouterLink>
+          <p class="para_text mt-3 text-dark">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+         
+        </div>
+        <div class="text-center text-lg-start col-12 col-md-3 ps-4 text-dark mb-4 mb-md-0">
           <h5>Information</h5>
           <ul class="list-unstyled">
             <!-- <li><a href="#">About Us</a></li>
@@ -19,12 +26,11 @@
                                 
           </ul>
         </div>
-
         <!-- Contact Us -->
-        <div class="col-12 col-md-4 text-dark text-center text-lg-start mb-4 mb-md-0">
+        <div class="col-12 col-md-3 text-dark text-center text-lg-start mb-4 mb-md-0">
           <h5>Contact Us</h5>
           <address>
-            <strong>Bloom World</strong><br>
+            Bloom World<br>
             South Kovil Road, M.G.Road, <br>
             Thrissur, Kerala, India.<br>
             <a href="tel:00914872383834">0091 487 2383834</a><br>
@@ -35,15 +41,14 @@
         </div>
 
         <!-- Find Us -->
-        <div class="col-12 col-md-4 text-dark text-center text-lg-start">
+        <div class="col-12 col-md-2 text-dark text-center text-lg-start">
           <h5>Find us</h5>
           <p>You can find us here.</p>
           <div>
-            <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-dark me-3"><i class="fab fa-google"></i></a>
-            <a href="#" class="text-dark me-3"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="text-dark me-3"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="text-dark me-3"><i class="text-danger bi bi-instagram"></i></a>
+            <a href="#" class="text-dark me-3"><i class="text-danger bi bi-facebook"></i></a>
+            <a href="#" class="text-dark me-3"><i class="text-danger bi bi-twitter"></i></a>
+            <a href="#" class="text-dark me-3"><i class="text-danger bi bi-linkedin"></i></a>
           </div>
         </div>
       </div>

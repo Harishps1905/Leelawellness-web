@@ -82,8 +82,7 @@ body{
 }
 
 .lineherobg {
-  background:
-      url('../assets/images/line.png') repeat-x center;
+  background:  url('@/assets/images/line.png') repeat-x center;
   background-size: contain;
   height: 50px
 }
@@ -102,7 +101,7 @@ body{
     object-fit: cover;
   }
   .height10vh{
-    height: 18vh;
+    height: 11vh;
   }
   .productbgall{
     background-size: auto !important;

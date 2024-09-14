@@ -1,8 +1,8 @@
 <template>
     <header style="z-index: 1;" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
         <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection d-flex justify-content-between text-white px-4">
-            <span class="para_text">Free shipping on orders over AED 500</span>
-            <span><a style="text-decoration: none;" class="text-white para_text" href="tel:+1234567890"><i class="bi bi-telephone"></i> +1 234 567 890</a>
+            <span class="para_text">Free shipping on orders over 500 Rupees</span>
+            <span><a style="text-decoration: none;" class="text-white para_text" href="tel:+00914872383834"><i class="bi bi-telephone"></i> +91 4872383834</a>
             </span>
         </div>
         <nav class="navbar navbar-default p-0">
@@ -49,9 +49,9 @@
                 <div>
                     <ul class="pt-5 nav_list d-flex flex-column align-items-center justify-content-end gap-4 h-100 list-unstyled m-0 cursor">
                                 <div class="btn px-5" @click="pageRoute('/')" :class="{grad_btn : $route.name === 'Landing', 's': $route.name !== 'Landing' }">Home</div>
-                                <div class="btn px-5" @click="pageRoute('/about-leelashilajith')" :class="{grad_btn : $route.name === 'grad_btn', 'headline_color_3': $route.name !== 'AboutUs' }">About Leela</div>
-                                <div class="btn px-5" @click="pageRoute('/contact-us')" :class="{headline_color_1 : $route.name === 'ContactUs', 'headline_color_3': $route.name !== 'ContactUs' }">Contact</div>
-                                <div class="btn px-5" @click="pageRoute('/products')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
+                                <div class="btn px-5" @click="pageRoute('/about-leelashilajith')" :class="{grad_btn : $route.name === 'AboutUs', 'headline_color_3': $route.name !== 'AboutUs' }">About Leela</div>
+                                <div class="btn px-5" @click="pageRoute('/contact-us')" :class="{grad_btn : $route.name === 'ContactUs', 'headline_color_3': $route.name !== 'ContactUs' }">Contact</div>
+                                <div class="btn px-5" @click="pageRoute('/products')" :class="{grad_btn : $route.name === 'ProductPage', 'headline_color_3': $route.name !== 'ProductPage' }">Products</div>
                                 <!-- <button class="nav_list btn rounded px-4 py-2">Inquire Now</button> -->
                             </ul>
                 </div>
@@ -86,7 +86,11 @@ export default {
         handleScroll() {
             this.isScrolled = window.scrollY >= 60;
         },
+        closeOffcanvas() {
+      this.$refs.closeButton.click();
+    },
         pageRoute(link) { // Close offcanvas before navigating
+            this.closeOffcanvas();
       this.$router.push(link);
     },
     }

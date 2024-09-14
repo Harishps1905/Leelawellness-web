@@ -1,13 +1,12 @@
 <template>
-    <div style="height: 130px;"></div>
-    <section data-aos="fade-down" class="page-banner">
-        <object>
-            <img src="../assets/images/hero-99.png" class="img-fluid" width="100%" height="200px" />
-        </object>
+    <div class="height10vh"></div>
+    <section data-aos="fade-down" class="page-banner positon-relative">
+            <img src="@/assets/images/contact.jpg" style="object-fit: cover; object-position: center;" width="100%" height="500px" />
+            <span style="top: 40%; left: 5%; z-index: 999;" class="position-absolute text-white main_headline">Contact Us</span>
     </section>
     <section class="bg-black pt-4 pb-5">
         <div class="container">
-            <div class="row py-5">
+            <div class="row m-0 py-5">
                 <div data-aos="fade-left" class="col-12 col-lg-5">
                     <div class="mt-3 mb-5">
                         <h1 class="text-uppercase text-white">get in touch</h1>
@@ -45,8 +44,8 @@
                     </div>
                 </div>
                 <div data-aos="fade-right" class="col-12 col-lg-7 form_bg">
-                    <div class="position-relative">
-                        <div style="top: 90px" class="position-absolute">
+                    <div class="">
+                        <div>
                             <form @submit.prevent="quickContactForm"
                                 class="w-100 d-flex flex-column align-items-center justify-content-center">
                                 <div class="py-4">
@@ -55,12 +54,10 @@
                                 <div class="row align-items-center sendus_message w-100 px-1 px-md-4 px-lg-5">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input  type="text" placeholder="name" />
+                                            <input type="text" placeholder="name" />
                                         </div>
                                         <div class="col-6">
-                                            <select
-                                                class="form-control text-white bg-transparent border-0 border-bottom rounded-0"
-                                                 >
+                                            <select class="form-control text-white bg-transparent border-0 border-bottom rounded-0" >
                                                 <option class="text-white" value="" disabled>
                                                     Services
                                                 </option>
@@ -89,9 +86,7 @@
                                         <button   class="rounded py-2 px-5 contact_btn text-white">
                                             Submit
                                         </button>
-                                        <button  class="rounded py-2 px-5 contact_btn text-white">
-                                            please wait...
-                                        </button>
+                                       
                                     </span>
                                 </div>
                             </form>
@@ -101,10 +96,7 @@
             </div>
         </div>
     </section>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.8776136606507!2d55.223420499999996!3d25.139828200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6ba3a55d8489%3A0x2837e3c1f63c57d8!2s9X%20Production!5e0!3m2!1sen!2sae!4v1721392100033!5m2!1sen!2sae"
-        width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.710160234827!2d76.2032739721919!3d10.523479340869802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee440462505b%3A0xb43cb61adb25ff4b!2sMG%20Road%20%26%20S%20Amman%20Kovil%20Ln%2C%20Kottappuram%2C%20Thrissur%2C%20Kerala%20680667%2C%20India!5e0!3m2!1sen!2sae!4v1726347462783!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </template>
 
 <script>

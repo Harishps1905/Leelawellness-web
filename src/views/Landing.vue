@@ -3,13 +3,13 @@
     <div class="herobg">
     <div class="container-fluid p-0">
         <div class="row m-0 vh-100">
-            <div data-aos="fade-in" class="col-12 col-md-7 text-white d-flex align-items-start justify-content-center flex-column text-start gap-4 px-3 px-lg-5">
-                <h2 class="main_headline pt-md-1">LEELA SHILAJITH</h2>
-                <p class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
-                <RouterLink class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded" :to="{ path: '/products' }">Shop now</RouterLink>
+            <div class="col-12 col-md-7 text-white d-flex align-items-start justify-content-center flex-column text-start gap-4 px-3 px-lg-5">
+                <h2 data-aos="fade-right"  class="main_headline pt-md-1">LEELA SHILAJITH 36 Gold</h2>
+                <p data-aos="fade-right"  class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+                <RouterLink data-aos="fade-right" class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded" :to="{ path: '/products' }">Shop now</RouterLink>
             </div>
             <div class="col-12 col-lg-5 d-flex align-items-end justify-content-end">
-                <img style="padding-bottom: 54px;" class="img-fluid leelabg_hero" src="@/assets/images/Leela-36__Cap-3D-Mockup--Side-3__1_-removebg-preview.png" alt="Hero Image">
+                <img style="padding-bottom: 54px;" class="img-fluid leelabg_hero" data-aos="fade-left" src="@/assets/images/Leela-36__Cap-3D-Mockup--Side-3__1_-removebg-preview.png" alt="Hero Image">
             </div>
         </div>
     </div>
@@ -34,6 +34,7 @@
         </div>
     </section>
     <HerbalWellness />
+    <ProductPage/> 
     <section class="my-5">
         <div class="whyLeela">
             <div class="container h-100 py-5">
@@ -52,40 +53,40 @@
             </div>
         </div>
     </section>
-     <ProductPage/> 
-
-    <section class="my-5 py-5">
-        <div class="container">
-            <div class="row m-0">
-                <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="text-uppercase sub_main_headline">Our Shilajit is Potent and Pure</h1>
-                    <img src="@/assets/images/shilaj-1.webp" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
-
-                    <img width="100" src="@/assets/images/howdoesitwork.png" class="img-fluid" alt="">
-                    <div>
-                        <h2 class="sub_header">How to use</h2>
-                        <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+   
+    <!-- 
+        <section class="my-5 py-5">
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="text-uppercase sub_main_headline">Our Shilajit is Potent and Pure</h1>
+                        <img src="@/assets/images/shilaj-1.webp" class="img-fluid" alt="">
                     </div>
-                </div>
-                <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
-                    <img width="100" src="@/assets/images/howtouse.jpg" class="img-fluid" alt="">
-                    <div>
-                        <h2 class="sub_header">How to use</h2>
-                        <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+                    <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
+
+                        <img width="100" src="@/assets/images/howdoesitwork.png" class="img-fluid" alt="">
+                        <div>
+                            <h2 class="sub_header">How to use</h2>
+                            <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
-                    <img width="100" src="@/assets/images/isitsafe.png" class="img-fluid" alt="is it safe">
-                    <div>
-                        <h2 class="sub_header">How to use</h2>
-                        <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+                    <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
+                        <img width="100" src="@/assets/images/howtouse.jpg" class="img-fluid" alt="">
+                        <div>
+                            <h2 class="sub_header">How to use</h2>
+                            <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
+                        <img width="100" src="@/assets/images/isitsafe.png" class="img-fluid" alt="is it safe">
+                        <div>
+                            <h2 class="sub_header">How to use</h2>
+                            <p class="para_text">Follow our simple graphic guideline on How to Use Shilajit. You will not only learn about daily dosage, but also about certain factors you need to avoid.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section> -->
+        </section>  -->
 </template>
 
 <script>

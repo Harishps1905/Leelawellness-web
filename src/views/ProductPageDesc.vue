@@ -4,12 +4,12 @@
     <div style="height: 20vh;"></div>
     <div class="container my-5">
       <div class="row m-0" v-if="productDetails">
-        <div class="col-md-6">
-          <img :src="productDetails.imageUrl" class="card-img-top" alt="Product 3">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <img :src="productDetails.imageUrl" class="img-fluid" alt="Product 3">
         </div>
-        <div class="col-md-6">
-          <p><strong>ID:</strong>{{ productDetails.id }}</p>
-          <h1 class="product-name">{{ productDetails.productname }}</h1>
+        <div class="col-12 col-md-6">
+          <p><strong>ID: </strong>{{ productDetails.id }}</p>
+          <h1 class="product-name sub_main_headline">{{ productDetails.productname }}</h1>
           <p class="text-muted">Himalayan Mountains</p>
           <p><span class="original-price"></span><span class="price">₹{{ productDetails.price }}</span> </p>
           <p class="text-success">In stock, ready to ship</p>
@@ -21,14 +21,13 @@
               <button class="btn btn-outline-secondary" type="button" @click="increaseQuantity">+</button>
             </div>
           </div>
-          <div class="my-4">
-            <button class="btn w-100 rounded-0 border-dark btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i
-                class="bi bi-whatsapp"></i></button>
-                <a  href="tel:00914872383834" class="btn w-100 rounded-0 border-dark btn-outline-success"><i class="bi bi-telephone"></i> Make A Call To Order</a>
+          <div class="my-4 d-flex flex-column gap-3">
+            <button class="btn w-100 rounded border-secondary btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i class="bi bi-whatsapp"></i></button>
+            <a href="tel:00914872383834" class="btn w-100 rounded border-secondary btn-outline-success"><i class="bi bi-telephone"></i> Make A Call To Order</a>
           </div>
-          <h2>Ingredients</h2>
-          <p>Below are the ingredients used</p>
-          <p class="product-description"> {{ productDetails.ingredients }} </p>
+          <h2 class="mt-3 text-uppercase">Ingredients</h2>
+          <p class="sub_header headline_color_2">Below are the ingredients used</p>
+          <p class="product-description para_header headline_color_3"> {{ productDetails.ingredients }} </p>
         </div>
       </div>
       <div v-else>
