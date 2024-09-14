@@ -19,15 +19,15 @@
                             <li>
                                 <i class="bi bi-phone"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
                                     class="text-decoration-none text-secondary"
-                                    href="tel:+971522280076">971-4444</a>
+                                    href="tel:0091 487 2383834">0091 487 2383834</a>
                             </li>
                             <li>
                                 <i class="bi bi-telephone-fill"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary" href="tel:+971045686600">345466654576</a>
+                                    class="text-decoration-none text-secondary" href="tel:0091 907 2099959">0091 907 2099959</a>
                             </li>
                             <li>
-                                <i class="bi bi-telephone-fill"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary" href="tel:+971045762246">24334234324</a>
+                                <i class="bi bi-whatsapp"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
+                                    class="text-decoration-none text-secondary" href="tel:0091 487 2383834">0091 487 2383834</a>
                             </li>
                             <li>
                                 <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
