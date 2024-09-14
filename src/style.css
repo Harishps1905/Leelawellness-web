@@ -75,7 +75,7 @@ body{
 
 /* ?HOMEPAGE */
 .herobg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.jpg');
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.JPG');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
