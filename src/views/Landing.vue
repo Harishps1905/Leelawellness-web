@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="mt-4 d-flex align-items-center justify-content-center">
-            <button class="grad_btn btn px-5">Know More</button>
+            <button class="grad_btn btn px-5"  @click="pageRoute('/about-leelashilajith')">Know More</button>
         </div>
     </section>
     <HerbalWellness />
@@ -53,6 +53,7 @@
         </div>
     </section>
      <ProductPage/> 
+
     <section class="my-5 py-5">
         <div class="container">
             <div class="row m-0">
@@ -61,6 +62,7 @@
                     <img src="@/assets/images/shilaj-1.webp" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
+
                     <img width="100" src="@/assets/images/howdoesitwork.png" class="img-fluid" alt="">
                     <div>
                         <h2 class="sub_header">How to use</h2>
@@ -96,7 +98,12 @@ export default {
         ChoosingLeela,
         HerbalWellness,
         ProductPage
-    },
+    }, 
+    methods: {
+        pageRoute(link) { 
+            this.$router.push(link);
+        },
+    }
 }
 </script>
 
@@ -104,8 +111,8 @@ export default {
 .whyLeela {
     background: url('../assets/images/whyleela.png') no-repeat center;
     background-size: cover;
-    background-attachment: fixed    ;
-   padding: 50px 0px;
+    background-attachment: fixed;
+    padding: 50px 0px;
 }
 .comparison-section {
     padding: 20px;
@@ -118,7 +125,9 @@ export default {
     border-collapse: collapse;
     text-align: left;
 }
-.comparison-table th, .comparison-table td {
+
+.comparison-table th,
+.comparison-table td {
     padding: 15px;
 }
 .comparison-table thead th {
@@ -130,11 +139,13 @@ export default {
     border-top: 1px solid #ddd;
 }
 .checkmark {
-    color: #4CAF50; /* Green */
+    color: #4CAF50;
+    /* Green */
     text-align: center;
 }
 .cross {
-    color: #F44336; /* Red */
+    color: #F44336;
+    /* Red */
     text-align: center;
 }
 .comparison-table tbody tr td:first-child {
@@ -143,11 +154,15 @@ export default {
 /* Add violet background for the "Thera Hair" column */
 .comparison-table tbody td:nth-child(2),
 .comparison-table thead th:nth-child(2) {
-    background-color: #7a68b3; /* Violet color */
-    border-radius: 0px; /* For rounded corners on the violet background */
+    background-color: #7a68b3;
+    /* Violet color */
+    border-radius: 0px;
+    /* For rounded corners on the violet background */
 }
+
 .comparison-table thead th:nth-child(2) {
-    background-color: #7a68b3; /* Violet color */
+    background-color: #7a68b3;
+    /* Violet color */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }

@@ -6,12 +6,17 @@
         <div class="text-center text-lg-start col-12 col-md-4 text-dark mb-4 mb-md-0">
           <h5>Information</h5>
           <ul class="list-unstyled">
-            <li><a href="#">About Us</a></li>
+            <!-- <li><a href="#">About Us</a></li>
             <li><a href="#">Delivery Information</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Customer Service</a></li>
-            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Return Policy</a></li> -->
+            <li><div class="" @click="pageRoute('/')">Home</div></li>
+            <li><div @click="pageRoute('/about-leelashilajith')">About Leela</div></li>
+            <li><div @click="pageRoute('/contact-us')">Contact</div></li>
+            <li><div @click="pageRoute('/products')">Products</div></li>
+                                
           </ul>
         </div>
 
@@ -19,9 +24,11 @@
         <div class="col-12 col-md-4 text-dark text-center text-lg-start mb-4 mb-md-0">
           <h5>Contact Us</h5>
           <address>
-            Your current address goes to here, 120 example, country.<br>
-            <a href="tel:+00825425425487">(008) 254 254 254 25487</a><br>
-            <a href="tel:+0083585876576985">(008) 358 587 657 6985</a><br>
+            <strong>Bloom World</strong><br>
+            South Kovil Road, M.G.Road, <br>
+            Thrissur, Kerala, India.<br>
+            <a href="tel:00914872383834">0091 487 2383834</a><br>
+            <a href="tel:00919072099959">0091 907 2099959</a><br>
             <a href="mailto:support@example.com">support@example.com</a><br>
             <a href="mailto:example@admin.com">example@admin.com</a>
           </address>
@@ -30,7 +37,7 @@
         <!-- Find Us -->
         <div class="col-12 col-md-4 text-dark text-center text-lg-start">
           <h5>Find us</h5>
-          <p>Your description goes here. You can find us here.</p>
+          <p>You can find us here.</p>
           <div>
             <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
             <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
@@ -53,7 +60,12 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  methods: {   
+    pageRoute(link) { // Close offcanvas before navigating
+      this.$router.push(link);
+    },
+  }
 }
 </script>
 

@@ -26,7 +26,7 @@
       <div class="container h-100">
           <div class="row align-items-center h-100 m-0" >
               <div class="col-md-6 mb-4 mb-md-0">
-                <img data-aos="fade-right" src="@/assets/images/runningImg.png" class="img-fluid px-5" alt="Himalayan Product 3">
+                <img data-aos="fade-right" src="@/assets/images/Leela-36_Cap1.png" class="img-fluid px-5" alt="Himalayan Product 3">
               </div>
               <div class="col-md-6" data-aos="fade-left">
                   <h1 class="fw-bold text-dark number p-0 m-0">0{{index+1}}</h1>
