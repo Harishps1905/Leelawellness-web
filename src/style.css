@@ -61,7 +61,7 @@ body{
   font-size: clamp(15px, 3vw ,25px);
 }
 .para_text{
-  font-size: clamp(12px, 3vw ,16px);
+  font-size: clamp(12px, 3vw ,14px);
 }
 .nav_list{
   font-size: 18px;
@@ -75,7 +75,7 @@ body{
 
 /* ?HOMEPAGE */
 .herobg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.webp');
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.197) 70%), url('@/assets/images/DAL.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -86,4 +86,7 @@ body{
       url('../assets/images/line.png') repeat-x center;
   background-size: contain;
   height: 50px
+}
+.w-50{
+  width: 50%;
 }

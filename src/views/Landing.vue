@@ -6,9 +6,13 @@
                 <div data-aos="fade-in"
                     class="col-12 col-md-7 d-flex align-items-start text-white flex-column text-start h-100 gap-4">
                     <h2 class="main_headline">LEELA SHILAJITH</h2>
-                    <p class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+                    <p class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance,
+                        strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural
+                        ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient
+                        Ayurvedic wisdom.</p>
                     <!-- <button class="btn grad_btn px-5 py-2 rounded">Shop now</button> -->
-                    <RouterLink class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded" :to="{ path: '/products' }">Shop now</RouterLink>
+                    <RouterLink class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded"
+                        :to="{ path: '/products' }">Shop now</RouterLink>
 
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-end ">
@@ -28,16 +32,22 @@
         <div class="container p-0">
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-center flex-column gap-4" data-aos="fade-down">
+                    <div class="d-flex align-items-center justify-content-center flex-column gap-4"
+                        data-aos="fade-down">
                         <h1 class="sub_main_headline">WELCOME TO LEELA SHILAJITH</h1>
-                        <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you need to live life at your optimum. We’re tired of seeing artificial compounds touted as “healthy” supplements. We believe the healthiest supplements available on planet earth are those produced by mother nature, and not by scientists in a lab.</p>
-                        <p class="para_header text-center">That’s why we set out on our mission to bring Primul Shilajit to the mainstream by educating consumers on the immense benefits contained within this 100% natural and time-tested resin.</p>
+                        <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you
+                            need to live life at your optimum. We’re tired of seeing artificial compounds touted as
+                            “healthy” supplements. We believe the healthiest supplements available on planet earth are
+                            those produced by mother nature, and not by scientists in a lab.</p>
+                        <p class="para_header text-center">That’s why we set out on our mission to bring Primul Shilajit
+                            to the mainstream by educating consumers on the immense benefits contained within this 100%
+                            natural and time-tested resin.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="mt-4 d-flex align-items-center justify-content-center">
-            <button class="grad_btn btn px-5">Know More</button>
+            <button class="grad_btn btn px-5"  @click="pageRoute('/about-leelashilajith')">Know More</button>
         </div>
     </section>
 
@@ -62,7 +72,7 @@
         </div>
     </section>
 
-    <ProductPage/>
+    <ProductPage />
 
     <section class="my-5 py-5">
         <div class="container">
@@ -71,7 +81,7 @@
                     <h1 class="text-uppercase sub_main_headline">Our Shilajit is Potent and Pure</h1>
                     <img src="@/assets/images/shilaj-1.webp" class="img-fluid" alt="">
                 </div>
-                <div  
+                <div
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/howdoesitwork.png" class="img-fluid" alt="">
                     <div>
@@ -80,7 +90,7 @@
                             only learn about daily dosage, but also about certain factors you need to avoid.</p>
                     </div>
                 </div>
-                <div  
+                <div
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/howtouse.jpg" class="img-fluid" alt="">
                     <div>
@@ -89,7 +99,7 @@
                             only learn about daily dosage, but also about certain factors you need to avoid.</p>
                     </div>
                 </div>
-                <div  
+                <div
                     class="col-4 d-flex justify-content-center flex-column align-items-center align-content-center text-center gap-4">
                     <img width="100" src="@/assets/images/isitsafe.png" class="img-fluid" alt="">
                     <div>
@@ -113,7 +123,12 @@ export default {
         ChoosingLeela,
         HerbalWellness,
         ProductPage
-    },
+    }, 
+    methods: {
+        pageRoute(link) { 
+            this.$router.push(link);
+        },
+    }
 
 }
 </script>
@@ -122,8 +137,8 @@ export default {
 .whyLeela {
     background: url('../assets/images/whyleela.png') no-repeat center;
     background-size: cover;
-    background-attachment: fixed    ;
-   padding: 50px 0px;
+    background-attachment: fixed;
+    padding: 50px 0px;
 }
 
 
@@ -140,7 +155,8 @@ export default {
     text-align: left;
 }
 
-.comparison-table th, .comparison-table td {
+.comparison-table th,
+.comparison-table td {
     padding: 15px;
 }
 
@@ -155,12 +171,14 @@ export default {
 }
 
 .checkmark {
-    color: #4CAF50; /* Green */
+    color: #4CAF50;
+    /* Green */
     text-align: center;
 }
 
 .cross {
-    color: #F44336; /* Red */
+    color: #F44336;
+    /* Red */
     text-align: center;
 }
 
@@ -171,11 +189,15 @@ export default {
 /* Add violet background for the "Thera Hair" column */
 .comparison-table tbody td:nth-child(2),
 .comparison-table thead th:nth-child(2) {
-    background-color: #7a68b3; /* Violet color */
-    border-radius: 0px; /* For rounded corners on the violet background */
+    background-color: #7a68b3;
+    /* Violet color */
+    border-radius: 0px;
+    /* For rounded corners on the violet background */
 }
+
 .comparison-table thead th:nth-child(2) {
-    background-color: #7a68b3; /* Violet color */
+    background-color: #7a68b3;
+    /* Violet color */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }

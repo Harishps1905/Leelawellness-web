@@ -20,7 +20,7 @@
 
                 <!-- <div class="col prod_img">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="../assets/images/runningImg.png" class="card-img-top" alt="Himalayan Product 3">
+                        <img src="../assets/images/Leela-36_Cap1.png" class="card-img-top" alt="Himalayan Product 3">
                         <div class="card-body text-center">
                             <h5 class="card-title">Himalayan Product 3</h5>
                             <p class="card-text">$24.99</p>
@@ -38,7 +38,7 @@
       <div class="container h-100">
           <div class="row align-items-center h-100" >
               <div class="col-md-6 mb-4 mb-md-0">
-                <img data-aos="fade-right" src="@/assets/images/runningImg.png" class="img-fluid px-5" alt="Himalayan Product 3">
+                <img data-aos="fade-right" src="@/assets/images/Leela-36_Cap1.png" class="img-fluid px-5" alt="Himalayan Product 3">
               </div>
               <div class="col-md-6" data-aos="fade-left">
                   <h1 class="fw-bold text-dark number p-0 m-0">0{{index+1}}</h1>
