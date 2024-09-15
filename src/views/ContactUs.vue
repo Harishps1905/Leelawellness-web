@@ -96,7 +96,6 @@
             </div>
         </div>
     </section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.710160234827!2d76.2032739721919!3d10.523479340869802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee440462505b%3A0xb43cb61adb25ff4b!2sMG%20Road%20%26%20S%20Amman%20Kovil%20Ln%2C%20Kottappuram%2C%20Thrissur%2C%20Kerala%20680667%2C%20India!5e0!3m2!1sen!2sae!4v1726347462783!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </template>
 
 <script>
