@@ -4,8 +4,8 @@
     <div class="container-fluid p-0">
         <div class="row m-0 vh-100">
             <div class="col-12 col-md-7 text-white d-flex align-items-start justify-content-center flex-column text-start gap-4 px-3 px-lg-5">
-                <h2 data-aos="fade-right"  class="main_headline pt-md-1">LEELA SHILAJITH 36 Gold</h2>
-                <p data-aos="fade-right"  class="para_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+                <h2 data-aos="fade-right" class="main_headline pt-md-1">LEELA SHILAJITH 36 Gold</h2>
+                <p data-aos="fade-right" class="sub_header">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
                 <RouterLink data-aos="fade-right" class="active text-decoration-none headline_1 btn grad_btn px-5 py-2 rounded" :to="{ path: '/products' }">Shop now</RouterLink>
             </div>
             <div class="col-12 col-lg-5 d-flex align-items-end justify-content-end">

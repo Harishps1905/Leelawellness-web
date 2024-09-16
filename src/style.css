@@ -86,9 +86,9 @@ body{
   background-size: contain;
   height: 50px
 }
-.leelabg_hero{
-  width: 350px;
-  height: 550px;
+.leelabg_hero {
+  width: 300px;
+  height: 509px;
   object-fit: cover;
 }
 .height10vh{
