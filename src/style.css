@@ -10,9 +10,7 @@
 
 }
 /* get rids of the banner at the bottom of the web page */
-.translated-ltr {
-  visibility: hidden !important;
-}
+
 *{
   margin: 0;
   padding: 0;
