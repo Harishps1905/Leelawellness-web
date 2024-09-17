@@ -23,8 +23,8 @@
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center flex-column gap-4" data-aos="fade-down">
                         <h1 class="sub_main_headline text-center">WELCOME TO LEELA SHILAJITH</h1>
-                        <p class="para_header text-center">At Primul, we’re passionate about giving you the tools you need to live life at your optimum. We’re tired of seeing artificial compounds touted as “healthy” supplements. We believe the healthiest supplements available on planet earth are those produced by mother nature, and not by scientists in a lab.</p>
-                        <p class="para_header text-center">That’s why we set out on our mission to bring Primul Shilajit to the mainstream by educating consumers on the immense benefits contained within this 100% natural and time-tested resin.</p>
+                        <p class="para_header text-center">At Leela Shilajit, we’re dedicated to providing you with natural solutions to enhance your well-being. We are committed to offering pure, nature-derived supplements, steering clear of synthetic additives. Our philosophy centers around the belief that the most effective health solutions come from the earth, not a laboratory.</p>
+                        <p class="para_header text-center">That's why we have made it our mission to bring the benefits of Leela Shilajit to the forefront. This ancient, naturally occurring resin has stood the test of time, and we aim to educate our customers about its incredible, all-natural properties.</p>
                     </div>
                 </div>
             </div>
