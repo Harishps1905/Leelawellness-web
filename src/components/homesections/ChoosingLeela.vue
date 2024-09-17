@@ -55,7 +55,7 @@
 .Choosing_leela .card {
     background: linear-gradient(90deg,#ffd0357a,#ffd0354d);
     border-radius: 15px;
-    border: none;
+    border: 2px dotted gold;
  }
 
 </style>
