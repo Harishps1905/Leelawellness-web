@@ -93,6 +93,8 @@
 import ChoosingLeela from '@/components/homesections/ChoosingLeela.vue';
 import HerbalWellness from '@/components/homesections/HerbalWellness.vue';
 import ProductPage from '@/views/ProductPage.vue';
+import { useHead } from "@vueuse/head";
+
 export default {
     name: 'landing',
     components: {
@@ -100,6 +102,17 @@ export default {
         HerbalWellness,
         ProductPage
     }, 
+    setup() {
+    useHead({
+      title: 'Welcome to Leela Shilajith - Premium Ayurvedic Supplements',
+      meta: [
+        {
+          name: 'description',
+          content: 'Welcome to Leela Shilajith, where ancient Ayurvedic wisdom meets modern wellness. Discover our premium range of natural supplements designed to boost performance, enhance immunity, and support overall health.'
+        }
+      ]
+    });
+  },
     methods: {
         pageRoute(link) { 
             this.$router.push(link);

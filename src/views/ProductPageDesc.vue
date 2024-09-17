@@ -41,9 +41,21 @@
 <script>
 import { getProducts } from "@/firebase/db";
 import skeleton from '@/components/skeleton/Skeleton.vue';
+import { useHead } from "@vueuse/head";
 
 export default {
   name: 'ProductPageDesc',
+  setup() {
+    useHead({
+      title: `Leela Shilajith Product - leelashilajith`,
+      meta: [
+        {
+          name: 'description',
+          content: 'Discover [Product Name] by Leela Shilajith, a premium Ayurvedic supplement crafted to enhance your well-being. Learn about its benefits, ingredients, and how it supports vitality, performance, and overall health.'
+        }
+      ]
+    });
+  },
   props: {
     id: {
       type: String,

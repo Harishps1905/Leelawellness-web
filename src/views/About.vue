@@ -40,8 +40,21 @@
 </template>
 
 <script>
+import { useHead } from "@vueuse/head";
+
     export default {
         name:'about',
+        setup() {
+    useHead({
+      title: 'About Us - Leela Shilajith',
+      meta: [
+        {
+          name: 'description',
+          content: 'Discover Leela Shilajith, a powerful Ayurvedic supplement crafted to enhance vitality, strength, and overall health. Rooted in Ayurvedic wisdom, our natural formula supports immunity, reproductive health, and energy.'
+        }
+      ]
+    });
+  },
     }
 </script>
 

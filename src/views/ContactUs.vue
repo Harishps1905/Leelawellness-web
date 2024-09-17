@@ -29,9 +29,7 @@
                                     class="text-decoration-none text-secondary" href="tel:0091 487 2383834">0091 487 2383834</a>
                             </li>
                             <li>
-                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary"
-                                    href="mailto:info@9xproduction.com">info@leelashilajith.com</a>
+                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:info@9xproduction.com">info@leelashilajith.com</a>
                             </li>
                             <li>
                                 <a class="text-decoration-none text-secondary"
@@ -49,34 +47,26 @@
                             <form @submit.prevent="quickContactForm"
                                 class="w-100 d-flex flex-column align-items-center justify-content-center">
                                 <div class="py-4">
-                                    <h3 class="text-uppercase about_headline_color"> send us a message</h3>
+                                    <h3 class="text-uppercase about_headline_color">Send us a message</h3>
                                 </div>
                                 <div class="row align-items-center sendus_message w-100 px-1 px-md-4 px-lg-5">
-                                    <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
                                         <div class="col-6">
-                                            <input type="text" placeholder="name" />
+                                            <input type="text" placeholder="first name" required/>
                                         </div>
                                         <div class="col-6">
-                                            <select class="form-control text-white bg-transparent border-0 border-bottom rounded-0" >
-                                                <option class="text-white" value="" disabled>
-                                                    Services
-                                                </option>
-                                                <option class="bg-black">                                                </option>
-                                            </select>
+                                            <input type="text" placeholder="last name" required/>
                                         </div>
                                     </div>
                                     <div class="row pt-5">
                                         <div class="col-6">
-                                            <input type="email" placeholder="Email" />
-                                             
-
+                                            <input type="email" placeholder="Email" required/>
                                         </div>
                                         <div class="col-6">
-                                            <input type="tel"
-                                                placeholder="Contact Number" />
-                                           
-
+                                            <input type="tel"   placeholder="Contact Number" required/>
                                         </div>
+                                    </div>
                                     </div>
                                     <div class="col-12 pt-5">
                                         <textarea  
@@ -86,8 +76,9 @@
                                         <button   class="rounded py-2 px-5 contact_btn text-white">
                                             Submit
                                         </button>
-                                       
+
                                     </span>
+                                    <h2 class="text-success fs-6 mt-4 text-center" v-if="sendmsg">Email sent successfully. Thank you for visiting again.</h2>
                                 </div>
                             </form>
                         </div>
@@ -99,10 +90,35 @@
 </template>
 
 <script>
-
+import { useHead } from "@vueuse/head";
 
 export default {
-
+    name:"contactus",
+    setup() {
+    useHead({
+      title: 'Contact Us - Leela Shilajith',
+      meta: [
+        {
+          name: 'description',
+          content: 'Get in touch with Leela Shilajith for any inquiries or support. Find our contact details, including phone numbers and email address, and reach out to us for assistance with our Ayurvedic supplements.'
+        }
+      ]
+    });
+  },
+  data(){
+    return{
+        sendmsg:false
+    }
+  },
+  methods:{
+    quickContactForm(){
+        this.sendmsg=true;
+        setInterval(() => {
+        this.sendmsg=false;
+            
+        }, 8000);
+    }
+  }
 
 };
 </script>

@@ -46,7 +46,8 @@
   
   <script>
   import { getProducts } from "@/firebase/db";
-  
+  import { useHead } from "@vueuse/head";
+
   export default {
     name: 'product',
     data() {
@@ -54,6 +55,17 @@
         products: [],
       };
     },
+    setup() {
+    useHead({
+      title: 'Leela Shilajith - Premium Ayurvedic Supplement',
+      meta: [
+        {
+          name: 'description',
+          content: 'Explore Leela Shilajith, a premium Ayurvedic supplement designed to enhance performance, strengthen immunity, and support a healthy metabolism. Discover the benefits of our all-natural formulation crafted from potent herbs.'
+        }
+      ]
+    });
+  },
     created() {
       this.fetchProducts();
     },

@@ -1,5 +1,7 @@
 <template>
-    <section class="vh-100" style="background-color: #9A616D;">
+<div class="height10vh"></div>
+
+    <section style="background-color: #9A616D;" class="mt-5 py-5">
   <div class="container py-3 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -18,12 +20,12 @@
                   </div>
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17">Email address</label>
                 <input type="email" v-model="admin.email" id="form2Example17" class="form-control form-control-lg" />
-                <label class="form-label" for="form2Example17">Email address</label>
               </div>
               <div class="form-outline mb-4">
-                <input type="password" v-model="admin.password" id="form2Example27" class="form-control form-control-lg" />
                 <label class="form-label" for="form2Example27">Password</label>
+                <input type="password" v-model="admin.password" id="form2Example27" class="form-control form-control-lg" />
               </div>
               <div class="pt-1 mb-4">
                 <button class="btn btn-dark btn-lg btn-block" @click="authenticateUser" type="button">Login</button>

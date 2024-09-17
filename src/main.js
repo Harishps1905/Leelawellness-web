@@ -7,6 +7,9 @@ import 'aos/dist/aos.css';
 import store from './store/store';
 import PrimeVue from "primevue/config";
 
+import { createHead } from '@vueuse/head'
+const useHead = createHead()
+
 AOS.init({
   duration: 1000,
   easing: 'ease',
@@ -22,6 +25,7 @@ const app = createApp(App);
 app.use(store);
 app.use(PrimeVue);
 app.use(router);
+app.use(useHead);
 
 // Mount the app to the DOM
 app.mount('#app');
