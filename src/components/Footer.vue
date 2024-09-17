@@ -35,9 +35,8 @@
             Thrissur, Kerala, India.<br>
             <a href="tel:00914872383834">0091 487 2383834</a><br>
             <a href="tel:00919072099959">0091 907 2099959</a><br>
-            <a href="mailto:support@example.com">support@example.com</a><br>
-            <a href="mailto:example@admin.com">example@admin.com</a>
-          </address>
+            <a href="mailto:support@example.com">support@leelashilajith.com</a><br>
+           </address>
         </div>
 
         <!-- Find Us -->

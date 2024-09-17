@@ -4,7 +4,7 @@
         <div class="container my-5" data-aos="fade-in">
             <h2 class="text-center mb-4 py-5 sub_main_headline">Explore Our Leela Shilajith Product</h2>
             <div class="row m-0 justify-content-center g-4">
-                <div class="col-9 col-md-6 col-lg-3 prod_img" v-for="(prod, index) in this.$store.state.products">
+                <div class="col-9 col-sm-6 col-md-6 col-lg-3 prod_img" v-for="(prod, index) in this.$store.state.products">
                   <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
                     <div class="card h-100 shadow-sm border-0">
                         <img :src="prod.imageUrl" style="height:400px;"
@@ -32,7 +32,7 @@
                   <h1 class="fw-bold text-dark number p-0 m-0">0{{index+1}}</h1>
                   <div class="mb-5 mb-lg-2">
                       <h2 class="fw-bold text-uppercase">{{prod.productname}}</h2>
-                      <p class="lead">Leela shilajith, we provide professional. Our dedicated team and modern equipment ensure your vision is turned into reality with high quality.</p>
+                      <p class="lead sub_header2">Leela shilajith, we provide professional. Our dedicated team and modern equipment ensure your vision is turned into reality with high quality.</p>
                       <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
                          <button class="btn shadow border text-white px-5">Know More</button>
                       </router-link>

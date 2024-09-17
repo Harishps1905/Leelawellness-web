@@ -1,10 +1,17 @@
 <template>
     <header style="z-index: 1;" :class="{ 'scrolled': isScrolled }" class="d-flex flex-column">
-        <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection d-flex justify-content-between text-white px-4">
-            <span class="para_text">Free shipping on orders over 500 Rupees</span>
-            <span><a style="text-decoration: none;" class="text-white para_text" href="tel:+00914872383834"><i class="bi bi-telephone"></i> +91 4872383834</a>
-            </span>
-        </div>
+        <div :class="['header-2', isScrolled ? 'header-hidden' : '']" class="w-100 subheadsection d-flex justify-content-between text-white px-1 px-lg-4">
+  <div class="col-8">
+    <span class="para_text">Free shipping on orders over ₹500</span>
+  </div>
+  <div class="col-4 text-end">
+    <span>
+      <a style="text-decoration: none;" class="text-white para_text" href="tel:+00914872383834">
+        <i class="bi bi-telephone"></i> +91 4872383834
+      </a>
+    </span>
+  </div>
+</div>
         <nav class="navbar navbar-default p-0">
             <div class="container p-0">
                 <div class="row py-2 py-lg-2 m-0 px-3 w-100" data-aos="fade-in" >
