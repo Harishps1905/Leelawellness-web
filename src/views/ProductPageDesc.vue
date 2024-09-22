@@ -11,8 +11,11 @@
           <p><strong>ID: </strong>{{ productDetails.id }}</p>
           <h1 class="product-name sub_main_headline">{{ productDetails.productname }}</h1>
           <p class="text-muted">Himalayan Mountains</p>
-          <p><span class="original-price"></span><span class="price">₹{{ productDetails.price }}</span> </p>
-          <p class="text-success">In stock, ready to ship</p>
+          <div class=" d-flex flex-column">
+            <span class="fw-semibold">Available Sizes:</span>
+            <span class="text-danger">{{ productDetails.price }}</span> 
+          </div>
+          <p class="text-success"> </p>
           <div class="my-3">
             <p>Quantity</p>
             <div class="input-group">
@@ -23,7 +26,7 @@
           </div>
           <div class="my-4 d-flex flex-column gap-3">
             <button class="btn w-100 rounded border-secondary btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i class="bi bi-whatsapp"></i></button>
-            <a href="tel:00914872383834" class="btn w-100 rounded border-secondary btn-outline-success"><i class="bi bi-telephone"></i> Make A Call To Order</a>
+            <a href="tel:00914872383834" class="btn w-100 rounded border-secondary btn-outline-success"><i class="bi bi-telephone"></i> &nbsp;&nbsp;&nbsp;&nbsp;Make A Call To Order</a>
           </div>
           <h2 class="mt-3 text-uppercase">Ingredients</h2>
           <p class="sub_header headline_color_2">Below are the ingredients used</p>

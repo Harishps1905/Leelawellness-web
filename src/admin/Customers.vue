@@ -1,14 +1,28 @@
 <template>
-  <div>
-    customers
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="headline1 text-danger">Customers</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <dateandtime/>
+            </div>
+          </div>
   </div>
-  </template>
-  
-  <script>
-  
-  export default {
-      name: 'customers',
+  <div class="d-flex flex-grow-1 align-items-center justify-content-center">
+    <div class="py-5 text-black fw-bold">
+      No customers available
+    </div>
+  </div>
+</template>
+
+<script>
+import dateandtime from '@/admin/DateAndTime.vue'
+
+export default {
+  name: 'customers',
+  components: {
+    dateandtime
   }
-  </script>
-  
-  <style scoped></style>
+}
+</script>
+
+<style scoped></style>

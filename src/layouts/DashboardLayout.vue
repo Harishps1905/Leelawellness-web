@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-warning sidebar">
+      <nav class="col-12 col-md-3 col-lg-2 d-md-block grad_btn border-0">
         <div class="position-sticky">
-          <ul class="dashboardAdmin nav flex-column">
+          <ul class="dashboardAdmin nav flex-column py-5 py-md-0">
             <li class="nav-item">
               <RouterLink class="nav-link text-decoration-none"
                 :class="{ adminactive: $route.name === 'dashboard', 'adminnonactive': $route.name !== 'dashboard' }"
@@ -32,7 +32,7 @@
         </div>
       </nav>
       <!-- Main content -->
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <main class="col-12 col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5 py-md-0">
        <div v-if="this.$store.state.auth">
         <router-view />
        </div>
@@ -48,7 +48,7 @@
 <script>
 import { userSignOut } from "@/firebase/auth.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-// import { useRouter } from 'vue-router';
+import swal from "sweetalert";
 import { app } from "@/firebase/config";
 
 export default {
@@ -63,7 +63,11 @@ export default {
         await userSignOut();
         this.$store.dispatch('logout');
         await this.$router.push('/');
-        location.reload();
+        swal({
+                        title: "success",
+                        text: "Log out successfully",
+                        icon: "success",
+                    });
       } catch (error) {
         console.error("Error signing out:", error);
       }
@@ -78,16 +82,7 @@ export default {
 
 
 <style scoped>
-/* Add any component-specific styles here */
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  padding: 48px 0 0;
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-}
+ 
 
 @media (max-width: 767.98px) {
   .sidebar {
@@ -111,9 +106,11 @@ export default {
   border-bottom: 3px solid brown;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  font-weight: 500;
 }
 
 .dashboardAdmin .adminnonactive {
   color: black;
+  font-weight: 500;
 }
 </style>

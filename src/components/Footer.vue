@@ -53,7 +53,7 @@
       </div>
 
       <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center py-3 mt-4 border-top">
-        <p class="mb-0 text-dark">&copy; SabujCha. All Rights Reserved</p>
+        <p class="mb-0 text-dark">&copy; leelashilajith. All Rights Reserved</p>
         <div class="mt-3 mt-lg-0">
           <img class="img-fluid" src="../assets/images/payment.webp" alt="Payment methods">
         </div>

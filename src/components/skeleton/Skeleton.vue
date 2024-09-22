@@ -1,21 +1,8 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
-        <PrimevueSkeleton width="30rem" height="30rem" class="mb-3 w-100 " borderRadius="16px"></PrimevueSkeleton>
-      </div>
-      <div class="col-12 col-md-6">
-        <PrimevueSkeleton width="30rem" class="mb-4 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" height="2rem" class="mb-3 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" class="mb-4 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" height="2rem" class="mb-3 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" class="mb-4 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" height="2rem" class="mb-3 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" class="mb-4 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" height="2rem" class="mb-3 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" class="mb-4 w-100" borderRadius="16px"></PrimevueSkeleton>
-        <PrimevueSkeleton width="30rem" height="2rem" class="mb-3 w-100" borderRadius="16px"></PrimevueSkeleton>
-      
+      <div class="col-12 col-md-6 col-lg-3" v-for="n in 4">
+        <PrimevueSkeleton height="20rem" class="mb-3 w-100 " borderRadius="16px"></PrimevueSkeleton>
       </div>
     </div>
   </div>

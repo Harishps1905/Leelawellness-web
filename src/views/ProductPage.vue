@@ -6,12 +6,13 @@
             <div class="row m-0 justify-content-center g-4">
                 <div class="col-9 col-sm-6 col-md-6 col-lg-3 prod_img" v-for="(prod, index) in this.$store.state.products">
                   <router-link style="text-decoration: none;" :to="{ name: 'ProductPageDesc', params: { id: prod.id } }">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 border-0">
                         <img :src="prod.imageUrl" style="height:400px;"
                             class="img-fluid card-img-top" alt="Product 3">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{prod.productname}}</h5>
-                            <p class="card-text">₹{{prod.price}}</p>
+                            <span>Available Sizes:</span>
+                            <p class="card-text">{{prod.price}}</p>
                             <button class="btn btn-dark rounded-0 para_text w-100">Buy Now</button>
                         </div>
                     </div>
@@ -45,14 +46,12 @@
   </template>
   
   <script>
-  import { getProducts } from "@/firebase/db";
   import { useHead } from "@vueuse/head";
 
   export default {
     name: 'product',
     data() {
       return {
-        products: [],
       };
     },
     setup() {
@@ -66,26 +65,7 @@
       ]
     });
   },
-    created() {
-      this.fetchProducts();
-    },
-    computed: {
-      isInCart() {
-        return (productId) => this.$store.getters.isProductInCart(productId);
-      },
-    },
-    methods: {
-      async fetchProducts() {
-        try {
-          this.products = await getProducts();
-        } catch (error) {
-          console.error("Error fetching products:", error);
-        }
-      },
-      addtoCart(product) {
-        this.$store.dispatch('addToCart', product);
-      },
-    },
+  
   };
   </script>
 
@@ -96,4 +76,5 @@
   background-position: center;
   background-size: cover;
   height: 50vh;
-}</style>
+}
+</style>
