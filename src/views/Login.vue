@@ -50,8 +50,8 @@ export default {
   data() {
     return {
       admin: {
-        email: 'harishswami62@gmail.com',
-        password: '987654321',
+        email: '',
+        password: '',
       },
       loader:false,
     }
