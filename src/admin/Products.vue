@@ -13,7 +13,7 @@
     </div>
     <div v-else-if="error">{{ error }}</div>
     <div v-else>
-      <div class="col-9 col-sm-6 col-md-6 col-lg-3 prod_img" v-for="product in products" :key="product.id">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 prod_img" v-for="product in products" :key="product.id">
         <div class="card h-100 border-0 d-flex align-items-center">
           <img :src="product.imageUrl" style="height:240px; width: 200px;" class="img-fluid card-img-top"
             alt="productuct 3">
@@ -24,7 +24,7 @@
             <p>{{ product.ingredients }}</p>
           </div>
         </div>
-        <div class="d-flex justify-content-evenly">
+        <div class="d-flex justify-content-evenly pb-5 mb-5 pb-lg-0 mb-lg-0">
           <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#added"><i
               class="bi bi-folder-plus"></i></button>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"

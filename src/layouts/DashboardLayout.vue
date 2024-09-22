@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <nav class="col-12 col-md-3 col-lg-2 d-md-block grad_btn border-0">
-        <div class="position-sticky">
+      <nav class="col-12 col-md-3 col-lg-2 d-md-block grad_btn border-0 sidebardashboard">
+        <div class="pt-lg-5">
           <ul class="dashboardAdmin nav flex-column py-5 py-md-0">
             <li class="nav-item">
               <RouterLink class="nav-link text-decoration-none"
@@ -83,10 +83,12 @@ export default {
 
 <style scoped>
  
-
+ .sidebardashboard {
+    height: 100vh;
+  }
 @media (max-width: 767.98px) {
-  .sidebar {
-    top: 5rem;
+  .sidebardashboard {
+    height: 300px;
   }
 }
 
