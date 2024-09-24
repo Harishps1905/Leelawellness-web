@@ -22,7 +22,7 @@ export const getProducts = async () => {
 //get add a product to the db
 export const addProduct = async (product) => {
     try {
-      let prod = await productValidator("products", product.id);
+      let prod = await productValidator("products", product.id.toString());
       if (!prod) {
         await addOrUpateProduct(product)
         return "Product added successfully";
