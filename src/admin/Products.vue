@@ -5,9 +5,13 @@
       <div class="btn-group me-2">
         <dateandtime />
       </div>
+      
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#added"><i
+              class="bi bi-folder-plus"></i>  Add Product</button>
     </div>
   </div>
   <div>
+    
     <div v-if="loading">
       <skeleton />
     </div>
@@ -25,8 +29,6 @@
           </div>
         </div>
         <div class="d-flex justify-content-evenly pb-5 mb-5 pb-lg-0 mb-lg-0">
-          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#added"><i
-              class="bi bi-folder-plus"></i></button>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
             @click="loadProduct(product)"><i class="bi bi-pencil-square"></i></button>
           <button class="btn btn-danger" @click="deleteProductID(product.id)"><i class="bi bi-trash3"></i></button>
