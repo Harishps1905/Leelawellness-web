@@ -163,18 +163,27 @@ export default {
   methods: {
     async deleteProductID(id) {
     console.log('hello');
+    console.log(this.obj);
     
     this.loading = true;
     this.error = null;
     try {
-      const response = await addProduct(this.obj);
+      
+      const response = await deleteProduct(id);
       console.log(response);
       this.products = this.products.filter(product => product.id !== id);
-    } catch (error) {
       swal({
           title: "success",
-          text: "Failed to delete product. Please try again later.",
+          text: "Product deleted successfully",
           icon: "success",
+        });
+    } catch (error) {
+      console.log(error);
+      
+      swal({
+          title: "error",
+          text: "Failed to delete product. Please try again later.",
+          icon: "error",
         });
        
     } finally {
