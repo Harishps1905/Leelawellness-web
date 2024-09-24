@@ -7,8 +7,8 @@
         <div class="d-flex flex-grow-1 align-items-center justify-content-center">
             <div>
             <span class="fw-bold">{{ formattedTime }} </span>
-            <span class="fw-bold" v-if="formattedTime>12"> &nbsp;AM</span>
-            <span class="fw-bold" v-else="formattedTime<12"> &nbsp;PM</span>
+            <!-- <span class="fw-bold" v-if="formattedTime>12"></span>
+            <span class="fw-bold" v-else="formattedTime<12"></span> -->
         </div>
         </div>
     </div>

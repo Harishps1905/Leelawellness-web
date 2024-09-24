@@ -15,6 +15,7 @@ export const productValidator = async (yourCollection, yourDocumentId) => {
       return null; // Return null if the document does not exist
     }
   } catch (err) {
+    console.error(err);
     throw "Error getting document:", err; // Rethrow the error to handle it where the function is called
   }
 };
