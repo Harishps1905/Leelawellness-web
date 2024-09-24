@@ -93,7 +93,7 @@
         <div class="modal-body">
           <form>
             <div class="form-floating mb-3">
-              <input type="number" v-model="obj.id" placeholder="Product id" class="form-control" id="floatingInput">
+              <input type="text" v-model="obj.id" placeholder="Product id" class="form-control" id="floatingInput">
               <label for="floatingInput">Product Id</label>
             </div>
             <div class="form-floating mb-3">
@@ -102,11 +102,11 @@
             </div>
             <div class="form-floating mb-3">
               <input type="text" v-model="obj.price" placeholder="Product Price" class="form-control" id="floatingInput">
-              <label for="floatingInput">Product Name</label>
+              <label for="floatingInput">Product Short Description</label>
             </div>
             <div class="form-floating mb-3">
               <input type="text" v-model="obj.ingredients" placeholder="Ingredients" class="form-control" id="floatingInput">
-              <label for="floatingInput">Product Name</label>
+              <label for="floatingInput">Product Description</label>
             </div>
             <input type="file" @change="onFileChange" accept=".png, .jpg, .jpeg" />
             <p v-if="file">Selected File: {{ file.name }}</p>
@@ -118,7 +118,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" @click="addProduct" class="btn btn-primary">Save</button>
+          <button type="button" @click="addMyProduct" class="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
@@ -257,7 +257,7 @@ export default {
         console.error("Error saving product:", err);
       }
     },
-    async addProduct() {
+    async addMyProduct() {
       // this.obj.id=1++;
       try {
 
@@ -269,19 +269,19 @@ export default {
           text: "Product added successfully",
           icon: "success",
         });
-        setTimeout(() => {
-          location.reload();
-        }, 2000);
+        // setTimeout(() => {
+        //   location.reload();
+        // }, 2000);
       } catch (err) {
         swal({
           title: "error",
           text: "product invalid , please try again",
           icon: "error",
         });
-        setTimeout(() => {
-          location.reload();
-        }, 2000);
-        console.error("Error adding product:", err.code, err.message);
+        // setTimeout(() => {
+        //   location.reload();
+        // }, 2000);
+        console.error("Error adding productaaaaaa:", err);
         // Display a user-friendly error message
       }
     }
