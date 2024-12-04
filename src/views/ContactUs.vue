@@ -31,13 +31,13 @@
                             <li>
                                 <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:info@9xproduction.com">info@leelashilajith.com</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="text-decoration-none text-secondary"
-                                    href="https://maps.app.goo.gl/27Z3mRiWQonKLrfN6?g_st=com.google.maps.preview.copy"
+                                    href="#"
                                     target="_blank"><i class="bi bi-geo-alt fs-5"></i>
                                     &nbsp;&nbsp;&nbsp;&nbsp;leelashialajith trisurr
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
