@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       productDetails: null,
-      whatsappNumber: "+918129497944",
+      whatsappNumber: "+919072099959",
       NoOfProduct: 1,
     }
   },
