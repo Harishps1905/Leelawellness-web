@@ -6,8 +6,8 @@
   </div>
   <div class="col-4 text-end">
     <span>
-      <a style="text-decoration: none;" class="text-white para_text" href="tel:+00914872383834">
-        <i class="bi bi-telephone"></i> +91 4872383834
+      <a style="text-decoration: none;" class="text-white para_text" href="tel:+919072099959">
+        <i class="bi bi-telephone"></i> +91 9072099959
       </a>
     </span>
   </div>

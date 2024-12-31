@@ -26,7 +26,7 @@
           </div>
           <div class="my-4 d-flex flex-column gap-3">
             <button class="btn w-100 rounded border-secondary btn-success mb-10" @click="sendToWhatsApp">Buy Now &nbsp;&nbsp;<i class="bi bi-whatsapp"></i></button>
-            <a href="tel:00914872383834" class="btn w-100 rounded border-secondary btn-outline-success"><i class="bi bi-telephone"></i> &nbsp;&nbsp;&nbsp;&nbsp;Make A Call To Order</a>
+            <a href="tel:9072099959" class="btn w-100 rounded border-secondary btn-outline-success"><i class="bi bi-telephone"></i> &nbsp;&nbsp;&nbsp;&nbsp;Make A Call To Order</a>
           </div>
           <h2 class="mt-3 text-uppercase">Ingredients</h2>
           <p class="sub_header headline_color_2">Below are the ingredients used</p>

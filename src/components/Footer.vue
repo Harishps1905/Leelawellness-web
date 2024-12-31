@@ -7,7 +7,7 @@
           <RouterLink class="active text-decoration-none " :to="{ path: '/' }">
             <img class="img-fluid rounded logo_img" width="50px" src="@/assets/images/logo/Logo.png" alt="Logo">
           </RouterLink>
-          <p class="para_text mt-3 text-dark">Leela Shilajith is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
+          <p class="para_text mt-3 text-dark">Leela Gold is a premium Ayurvedic supplement that boosts performance, strengthens immunity, and supports healthy metabolism. Made with powerful herbs and natural ingredients, it's the ideal solution for enhancing vitality and energy, rooted in ancient Ayurvedic wisdom.</p>
          
         </div>
         <div class="text-center text-lg-start col-12 col-md-3 ps-4 text-dark mb-4 mb-md-0">
@@ -31,11 +31,10 @@
           <h5>Contact Us</h5>
           <address>
             Bloom World<br>
-            South Kovil Road, M.G.Road, <br>
             Thrissur, Kerala, India.<br>
             <a href="tel:00914872383834">0091 487 2383834</a><br>
             <a href="tel:00919072099959">0091 907 2099959</a><br>
-            <a href="mailto:support@example.com">support@leelashilajith.com</a><br>
+            <a href="mailto:prs.bloomworld@gmail.com">prs.bloomworld@gmail.com</a><br>
            </address>
         </div>
 

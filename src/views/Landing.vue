@@ -70,11 +70,11 @@ export default {
     }, 
     setup() {
     useHead({
-      title: 'Welcome to Leela Shilajith - Premium Ayurvedic Supplements',
+      title: 'Welcome to Leela Gold - Premium Ayurvedic Supplements',
       meta: [
         {
           name: 'description',
-          content: 'Welcome to Leela Shilajith, where ancient Ayurvedic wisdom meets modern wellness. Discover our premium range of natural supplements designed to boost performance, enhance immunity, and support overall health.'
+          content: 'Welcome to Leela Gold, where ancient Ayurvedic wisdom meets modern wellness. Discover our premium range of natural supplements designed to boost performance, enhance immunity, and support overall health.'
         }
       ]
     });

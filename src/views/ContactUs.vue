@@ -26,10 +26,10 @@
                             </li>
                             <li>
                                 <i class="bi bi-whatsapp"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    class="text-decoration-none text-secondary" href="tel:0091 487 2383834">0091 487 2383834</a>
+                                    class="text-decoration-none text-secondary" href="tel:9072099959">090 72099959</a>
                             </li>
                             <li>
-                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:info@9xproduction.com">info@leelashilajith.com</a>
+                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:prs.bloomworld@gmail.com">prs.bloomworld@gmail.com</a>
                             </li>
                             <!-- <li>
                                 <a class="text-decoration-none text-secondary"
