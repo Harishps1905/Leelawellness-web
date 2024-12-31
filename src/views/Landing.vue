@@ -23,6 +23,15 @@
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center flex-column gap-4" data-aos="fade-down">
                         <h1 class="sub_main_headline text-center">WELCOME TO LEELA SHILAJITH</h1>
+                        <div class="row g-2 w-100 m-0">
+                            <div class="col-12 col-md-6">
+                                <img class="img-fluid w-100 h-100" src="@/assets/images/leelacapsule.jpeg" alt="leelacapsule">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <img class="img-fluid w-100 h-100" src="@/assets/images/leelacapsule2.jpeg" alt="leelacapsule">
+                            </div>
+                            <div></div>
+                        </div>
                         <p class="para_header text-center">At Leela Shilajit, we’re dedicated to providing you with natural solutions to enhance your well-being. We are committed to offering pure, nature-derived supplements, steering clear of synthetic additives. Our philosophy centers around the belief that the most effective health solutions come from the earth, not a laboratory.</p>
                         <p class="para_header text-center">That's why we have made it our mission to bring the benefits of Leela Shilajit to the forefront. This ancient, naturally occurring resin has stood the test of time, and we aim to educate our customers about its incredible, all-natural properties.</p>
                     </div>
