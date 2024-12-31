@@ -8,6 +8,7 @@
           </div>
         </div>
         <h2>Product Details</h2>
+        <a class="my-2 btn btn-primary"  href="https://console.firebase.google.com/u/0/project/leelawellness-3567e/overview">USER ANALYTICS</a>
         <router-link class="text-success" style="text-decoration: none;" :to="{ name: 'Landing' }">
           Back to homepage <i class="bi bi-arrow-90deg-left"></i>
         </router-link>
