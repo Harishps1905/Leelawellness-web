@@ -29,7 +29,7 @@
                                     class="text-decoration-none text-secondary" href="tel:9072099959">090 72099959</a>
                             </li>
                             <li>
-                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:prs.bloomworld@gmail.com">prs.bloomworld@gmail.com</a>
+                                <i class="bi bi-envelope-check"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a class="text-decoration-none text-secondary" href="mailto:sp.bloomworld@gmail.com">sp.bloomworld@gmail.com</a>
                             </li>
                             <!-- <li>
                                 <a class="text-decoration-none text-secondary"

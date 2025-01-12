@@ -34,7 +34,7 @@
             Thrissur, Kerala, India.<br>
             <a href="tel:00914872383834">0091 487 2383834</a><br>
             <a href="tel:00919072099959">0091 907 2099959</a><br>
-            <a href="mailto:prs.bloomworld@gmail.com">prs.bloomworld@gmail.com</a><br>
+            <a href="mailto:sp.bloomworld@gmail.com">sp.bloomworld@gmail.com</a><br>
            </address>
         </div>
 
