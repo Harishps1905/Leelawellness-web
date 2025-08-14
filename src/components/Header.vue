@@ -32,7 +32,7 @@
                                 <div @click="pageRoute('/about-leelashilajith')" :class="{headline_color_1 : $route.name === 'AboutUs', 'headline_color_3': $route.name !== 'AboutUs' }">About Leela</div>
                                 <div @click="pageRoute('/contact-us')" :class="{headline_color_1 : $route.name === 'ContactUs', 'headline_color_3': $route.name !== 'ContactUs' }">Contact</div>
                                 <div @click="pageRoute('/products')" :class="{headline_color_1 : $route.name === 'products', 'headline_color_3': $route.name !== 'products' }">Products</div>
-                                <a href="tel: +917994869741" class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</a>
+                                <a href="tel:+917994869741" class="nav_list grad_btn btn text-white btn rounded px-4 py-2">Inquire Now</a>
                             </ul>
                         </div>
                     </div>
