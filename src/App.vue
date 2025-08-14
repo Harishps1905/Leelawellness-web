@@ -6,7 +6,7 @@
       </router-view>
 
       <div class="position-fixed whatsapp" style="bottom: 20px; right: 20px; cursor: pointer;">
-        <a href="https://wa.me/9072099959" target="_blank" class="whatsappimg">
+        <a href="https://wa.me/7994869741" target="_blank" class="whatsappimg">
          <img class="img-fluid p-2 bg-dark rounded-circle" src="@/assets/images/whatsapp.avif" alt="">
         </a>
       </div>
